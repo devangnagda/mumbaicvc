@@ -83,7 +83,7 @@ $(document).ready(function () {
       {
         data: "vaccine_name",
         searchable: false,
-        className: "text-start col-3",
+        className: "col-3",
         orderable: false,
       },
     ],

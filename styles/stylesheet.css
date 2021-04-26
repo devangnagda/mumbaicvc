@@ -57,7 +57,6 @@ table.dataTable {
 
 .custom-table :not(:last-child) > :last-child > * {
   border-bottom-color: #006064;
-  border-bottom: 0.5px solid #006064;
 }
 
 .custom-table tr.group,
@@ -95,5 +94,9 @@ table.dataTable {
   -ms-user-select: none; // Internet Explorer/Edge
   user-select: none; // Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox
   */
+}
+
+.custom-date {
+  border-bottom: 2px solid #dc3545;
 }
 /*# sourceMappingURL=stylesheet.css.map */

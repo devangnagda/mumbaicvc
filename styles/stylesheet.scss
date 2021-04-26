@@ -97,3 +97,7 @@ table.dataTable {
   user-select: none; // Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox
   */
 }
+
+.custom-date {
+  border-bottom: 2px solid #dc3545;
+}
