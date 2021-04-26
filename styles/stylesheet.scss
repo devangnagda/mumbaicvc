@@ -1,3 +1,4 @@
+
 body {
   font-family: Montserrat, sans-serif;
   --bs-font-sans-serif: Montserrat, Roboto, sans-serif;
@@ -74,6 +75,10 @@ table.dataTable {
   .group .bg-danger {
     font-size: 15px;
   }
+  
+  tfoot tr{
+    background-color: #f9f9f9;
+  }
 }
 
 .source-link {
@@ -83,6 +88,8 @@ table.dataTable {
   &:hover {
     text-decoration: underline;
   }
+
+  
 }
 
 .available-no {

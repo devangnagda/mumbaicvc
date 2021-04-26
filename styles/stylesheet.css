@@ -74,6 +74,10 @@ table.dataTable {
   font-size: 15px;
 }
 
+.custom-table tfoot tr {
+  background-color: #f9f9f9;
+}
+
 .source-link {
   color: #006064 !important;
   text-decoration: none;
