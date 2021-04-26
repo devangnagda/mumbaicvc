@@ -43,7 +43,7 @@ $(document).ready(function () {
       dataSrc: "",
     },
     renderer: "bootstrap",
-    responsive: "true",
+
     searching: false,
     // scrollY: '70vh', // Scrollable table fixed top - display vertical height
     // scrollCollapse: true, // Scrollable table fixed top
@@ -65,27 +65,39 @@ $(document).ready(function () {
         searchable: false,
       },
       {
+        data: "location",
+        searchable: true,
+        className: "col td-bg",
+        orderable: false,
+      },
+      {
         data: "center_name",
         searchable: true,
-        className: "col-5 td-bg",
+        className: "col td-bg",
         orderable: false,
       },
       {
         data: "center_category",
         searchable: false,
-        className: "text-center col-2 td-bg",
+        className: "col text-center td-bg",
         orderable: false,
       },
       {
         data: "available",
         searchable: false,
-        className: "text-center col-2 td-bg",
+        className: "col text-center td-bg",
         orderable: false,
       },
       {
         data: "vaccine_name",
         searchable: false,
-        className: "col-3 td-bg",
+        className: "col td-bg",
+        orderable: false,
+      },
+      {
+        data: "remarks",
+        searchable: false,
+        className: "col td-bg",
         orderable: false,
       },
     ],
@@ -115,7 +127,7 @@ $(document).ready(function () {
             $(rows)
               .eq(i)
               .before(
-                '<tr class="group text-center"><td colspan="5"> Ward <span class="badge bg-danger">' +
+                '<tr class="group text-center"><td colspan="6"> Ward <span class="badge bg-danger">' +
                   group +
                   "</span></td></tr>"
               );

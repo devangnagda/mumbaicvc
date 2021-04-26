@@ -26,6 +26,7 @@ table.dataTable {
 /* Table */
 .custom-table {
   font-weight: 600;
+  max-width: 85%;
 }
 
 .custom-table tr {
