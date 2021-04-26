@@ -1,2 +1,2 @@
-# mumbaicvc.github.io
+# mumbaicvc
 Mumbai Coronavirus Vaccination Centers Data
