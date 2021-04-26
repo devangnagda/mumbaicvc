@@ -454,8 +454,8 @@
     "ward": "HW",
     "center_name": "Surya Hospital",
     "center_category": "Private",
-    "available": "No",
-    "vaccine_name": "",
+    "available": "Yes",
+    "vaccine_name": "Covishield",
     "remarks": ""
   },
   {
@@ -517,8 +517,8 @@
     "ward": "KE",
     "center_name": "Holy Spirit",
     "center_category": "Private",
-    "available": "No",
-    "vaccine_name": "",
+    "available": "Yes",
+    "vaccine_name": "Covishield",
     "remarks": ""
   },
   {

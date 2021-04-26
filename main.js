@@ -42,6 +42,8 @@ $(document).ready(function () {
       url: "./mumbai-data/vaccination-centers.json",
       dataSrc: "",
     },
+    renderer: "bootstrap",
+    responsive: "true",
     searching: false,
     // scrollY: '70vh', // Scrollable table fixed top - display vertical height
     // scrollCollapse: true, // Scrollable table fixed top
