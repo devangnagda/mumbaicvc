@@ -1,6 +1,7 @@
 body {
   font-family: Montserrat, sans-serif;
   --bs-font-sans-serif: Montserrat, Roboto, sans-serif;
+  background-color: rgba(0, 96, 100, 0.08);
 }
 
 /* Scrollbar */
@@ -76,6 +77,10 @@ table.dataTable {
 
 .custom-table tfoot tr {
   background-color: #f9f9f9;
+}
+
+.custom-table tbody .td-bg {
+  background-color: #fff;
 }
 
 .source-link {

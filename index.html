@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Mumbai Covid-19 Vaccination Centers</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/png" />
     <!-- Bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
@@ -59,17 +60,20 @@
   </head>
   <body>
     <div class="container-fluid py-5">
-      <h3 class="text-center pb-3">
-        Functional COVID Vaccine centers on
-        <b class="custom-date">26 <sup>th</sup> April, 2021 </b>
-      </h3>
+      <div class="hero-image">
+        <h3 class="text-center pb-3">
+          <img src="./assets/mumbaicvc.svg" width="75" height="75" />
+          Functional COVID Vaccine centers on
+          <b class="custom-date">26 <sup>th</sup> April, 2021 </b>
+        </h3>
+      </div>
       <!-- Search -->
       <!-- <input type="text" id="searchInput" placeholder="Center Name Search..." /> -->
 
       <!-- Search -->
       <table
         id="data-table"
-        class="table table-responsive custom-table table-hover mx-auto"
+        class="table shadow table-responsive custom-table table-hover mx-auto"
         style="width: 85%"
       >
         <thead class="table-header">

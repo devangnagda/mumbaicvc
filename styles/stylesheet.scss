@@ -1,7 +1,7 @@
-
 body {
   font-family: Montserrat, sans-serif;
   --bs-font-sans-serif: Montserrat, Roboto, sans-serif;
+  background-color: rgba(#006064, 0.08);
 }
 
 /* Scrollbar */
@@ -75,9 +75,13 @@ table.dataTable {
   .group .bg-danger {
     font-size: 15px;
   }
-  
-  tfoot tr{
+
+  tfoot tr {
     background-color: #f9f9f9;
+  }
+
+  tbody .td-bg {
+    background-color: #fff;
   }
 }
 
@@ -88,8 +92,6 @@ table.dataTable {
   &:hover {
     text-decoration: underline;
   }
-
-  
 }
 
 .available-no {
