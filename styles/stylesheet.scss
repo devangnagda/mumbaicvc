@@ -27,6 +27,8 @@ table.dataTable {
 /* Table */
 
 .custom-table {
+  font-weight: 600;
+
   tr {
     border-top: 1px solid #006064 !important;
     border-bottom: 1px solid #006064 !important;
@@ -73,7 +75,7 @@ table.dataTable {
   }
 
   .group .bg-danger {
-    font-size: 15px;
+    font-size: 16px;
   }
 
   tfoot tr {
