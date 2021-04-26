@@ -1,0 +1,1217 @@
+[
+  {
+    "sr": 1,
+    "ward": "A",
+    "center_name": "Bombay Hospital",
+    "center_category": "Private",
+    "available": "Yes",
+    "vaccine_name": "Both (Covaxin only 2nd Dose)",
+    "remarks": ""
+  },
+  {
+    "sr": 2,
+    "ward": "A",
+    "center_name": "Navy Hospital Colaba",
+    "center_category": "State",
+    "available": "No",
+    "vaccine_name": "",
+    "remarks": ""
+  },
+  {
+    "sr": 3,
+    "ward": "A",
+    "center_name": "SHO Army Hospital",
+    "center_category": "Govt.",
+    "available": "Yes",
+    "vaccine_name": "Covishield",
+    "remarks": ""
+  },
+  {
+    "sr": 4,
+    "ward": "A",
+    "center_name": "Navy Family Center",
+    "center_category": "State",
+    "available": "No",
+    "vaccine_name": "",
+    "remarks": ""
+  },
+  {
+    "sr": 5,
+    "ward": "A",
+    "center_name": "CAMA Hospital",
+    "center_category": "State",
+    "available": "Yes",
+    "vaccine_name": "Both (Covaxin only 2nd Dose)",
+    "remarks": ""
+  },
+  {
+    "sr": 6,
+    "ward": "A",
+    "center_name": "HCG ICS Khubchandani Cancer Centre",
+    "center_category": "Private",
+    "available": "No",
+    "vaccine_name": "",
+    "remarks": ""
+  },
+  {
+    "sr": 7,
+    "ward": "B",
+    "center_name": "Habib Hospital",
+    "center_category": "Private",
+    "available": "No",
+    "vaccine_name": "",
+    "remarks": ""
+  },
+  {
+    "sr": 8,
+    "ward": "C",
+    "center_name": "Mittal Hospital",
+    "center_category": "Private",
+    "available": "Yes",
+    "vaccine_name": "Both (Covaxin only 2nd Dose)",
+    "remarks": ""
+  },
+  {
+    "sr": 9,
+    "ward": "C",
+    "center_name": "Chandanwadi Dispensary, Marine lines",
+    "center_category": "MCGM",
+    "available": "Yes",
+    "vaccine_name": "Covishield",
+    "remarks": ""
+  },
+  {
+    "sr": 10,
+    "ward": "D",
+    "center_name": "Jaslok Hospital",
+    "center_category": "Private",
+    "available": "Yes",
+    "vaccine_name": "Both (Covaxin only 2nd Dose)",
+    "remarks": ""
+  },
+  {
+    "sr": 11,
+    "ward": "D",
+    "center_name": "Saifee Hospital",
+    "center_category": "Private",
+    "available": "Yes",
+    "vaccine_name": "Covishield",
+    "remarks": ""
+  },
+  {
+    "sr": 12,
+    "ward": "D",
+    "center_name": "HN Reliance Hospital",
+    "center_category": "Private",
+    "available": "No",
+    "vaccine_name": "",
+    "remarks": ""
+  },
+  {
+    "sr": 13,
+    "ward": "D",
+    "center_name": "Breach Candy Hospital",
+    "center_category": "Private",
+    "available": "Yes",
+    "vaccine_name": "Covishield",
+    "remarks": ""
+  },
+  {
+    "sr": 14,
+    "ward": "D",
+    "center_name": "BD Petit Parsi Hospital",
+    "center_category": "Private",
+    "available": "Yes",
+    "vaccine_name": "Covishield",
+    "remarks": ""
+  },
+  {
+    "sr": 15,
+    "ward": "D",
+    "center_name": "Conwest Jain Hospital",
+    "center_category": "Private",
+    "available": "Yes",
+    "vaccine_name": "Covishield",
+    "remarks": ""
+  },
+  {
+    "sr": 16,
+    "ward": "D",
+    "center_name": "Bhatiya Hospital",
+    "center_category": "Private",
+    "available": "Yes",
+    "vaccine_name": "Both (Covaxin only 2nd Dose)",
+    "remarks": ""
+  },
+  {
+    "sr": 17,
+    "ward": "D",
+    "center_name": "St Elizabeth's Hospital",
+    "center_category": "Private",
+    "available": "Yes",
+    "vaccine_name": "Covishield",
+    "remarks": ""
+  },
+  {
+    "sr": 18,
+    "ward": "E",
+    "center_name": "TNMC & B.Y.L Nair Ch. Hospital",
+    "center_category": "MCGM",
+    "available": "Yes",
+    "vaccine_name": "Both (Covaxin only 2nd Dose)",
+    "remarks": ""
+  },
+  {
+    "sr": 19,
+    "ward": "E",
+    "center_name": "Kasturba Hospital",
+    "center_category": "MCGM",
+    "available": "Yes",
+    "vaccine_name": "Both (Covaxin only 2nd Dose)",
+    "remarks": ""
+  },
+  {
+    "sr": 20,
+    "ward": "E",
+    "center_name": "Wockhardt Hospital",
+    "center_category": "Private",
+    "available": "Yes",
+    "vaccine_name": "Covishield",
+    "remarks": ""
+  },
+  {
+    "sr": 21,
+    "ward": "E",
+    "center_name": "Balaji Hospital",
+    "center_category": "Private",
+    "available": "No",
+    "vaccine_name": "",
+    "remarks": ""
+  },
+  {
+    "sr": 22,
+    "ward": "E",
+    "center_name": "Prince Ali Khan Hospital",
+    "center_category": "Private",
+    "available": "No",
+    "vaccine_name": "",
+    "remarks": ""
+  },
+  {
+    "sr": 23,
+    "ward": "E",
+    "center_name": "Masina Hospital",
+    "center_category": "Private",
+    "available": "Yes",
+    "vaccine_name": "Covishield",
+    "remarks": ""
+  },
+  {
+    "sr": 24,
+    "ward": "E",
+    "center_name": "JJ Hospital",
+    "center_category": "State",
+    "available": "Yes",
+    "vaccine_name": "Both (Covaxin only 2nd Dose)",
+    "remarks": ""
+  },
+  {
+    "sr": 25,
+    "ward": "E",
+    "center_name": "Jagjivan Ram Hospital (Railways)",
+    "center_category": "State",
+    "available": "No",
+    "vaccine_name": "",
+    "remarks": ""
+  },
+  {
+    "sr": 26,
+    "ward": "E",
+    "center_name": "Dr Babasaheb Memorial GH (Railways)",
+    "center_category": "State",
+    "available": "Yes",
+    "vaccine_name": "Covishield",
+    "remarks": ""
+  },
+  {
+    "sr": 27,
+    "ward": "FS",
+    "center_name": "KEM Hospital",
+    "center_category": "MCGM",
+    "available": "Yes",
+    "vaccine_name": "Both (Covaxin only 2nd Dose)",
+    "remarks": ""
+  },
+  {
+    "sr": 28,
+    "ward": "FS",
+    "center_name": "Tata Hospital",
+    "center_category": "State",
+    "available": "Yes",
+    "vaccine_name": "Covishield",
+    "remarks": ""
+  },
+  {
+    "sr": 29,
+    "ward": "FS",
+    "center_name": "NJ Wadia",
+    "center_category": "Private",
+    "available": "Yes",
+    "vaccine_name": "Covishield",
+    "remarks": ""
+  },
+  {
+    "sr": 30,
+    "ward": "FS",
+    "center_name": "MGM Hospital",
+    "center_category": "Private",
+    "available": "Yes",
+    "vaccine_name": "Covishield",
+    "remarks": ""
+  },
+  {
+    "sr": 31,
+    "ward": "FS",
+    "center_name": "Global Hospital",
+    "center_category": "Private",
+    "available": "Yes",
+    "vaccine_name": "Covishield",
+    "remarks": ""
+  },
+  {
+    "sr": 32,
+    "ward": "FN",
+    "center_name": "L.T.M.C. & GH Sion Hospital",
+    "center_category": "MCGM",
+    "available": "Yes",
+    "vaccine_name": "Both (Covaxin only 2nd Dose)",
+    "remarks": ""
+  },
+  {
+    "sr": 33,
+    "ward": "FN",
+    "center_name": "K J Somaya Hospital",
+    "center_category": "Private",
+    "available": "Yes",
+    "vaccine_name": "Covishield",
+    "remarks": ""
+  },
+  {
+    "sr": 34,
+    "ward": "FN",
+    "center_name": "Lion Tarachand Bapa Hospital",
+    "center_category": "Private",
+    "available": "Yes",
+    "vaccine_name": "Covishield",
+    "remarks": ""
+  },
+  {
+    "sr": 35,
+    "ward": "FN",
+    "center_name": "Bombay Port Trust",
+    "center_category": "State",
+    "available": "No",
+    "vaccine_name": "",
+    "remarks": ""
+  },
+  {
+    "sr": 36,
+    "ward": "FN",
+    "center_name": "Acworth Leprosy",
+    "center_category": "MCGM",
+    "available": "Yes",
+    "vaccine_name": "Covishield",
+    "remarks": ""
+  },
+  {
+    "sr": 37,
+    "ward": "GS",
+    "center_name": "SRCC Childrens Hospital",
+    "center_category": "Private",
+    "available": "Yes",
+    "vaccine_name": "Covishield",
+    "remarks": ""
+  },
+  {
+    "sr": 38,
+    "ward": "GS",
+    "center_name": "ESIS Hospital",
+    "center_category": "State",
+    "available": "Yes",
+    "vaccine_name": "Both (Covaxin only 2nd Dose)",
+    "remarks": ""
+  },
+  {
+    "sr": 39,
+    "ward": "GS",
+    "center_name": "RA Poddar Medical College",
+    "center_category": "State",
+    "available": "Yes",
+    "vaccine_name": "Covishield",
+    "remarks": ""
+  },
+  {
+    "sr": 40,
+    "ward": "GS",
+    "center_name": "Worli Koliwada Dispensary",
+    "center_category": "MCGM",
+    "available": "Yes",
+    "vaccine_name": "Covishield",
+    "remarks": ""
+  },
+  {
+    "sr": 41,
+    "ward": "GN",
+    "center_name": "Mahim Maternity Home",
+    "center_category": "MCGM",
+    "available": "Yes",
+    "vaccine_name": "Covishield",
+    "remarks": ""
+  },
+  {
+    "sr": 42,
+    "ward": "GN",
+    "center_name": "Urban Health Centre Dharavi",
+    "center_category": "MCGM",
+    "available": "Yes",
+    "vaccine_name": "Covishield",
+    "remarks": ""
+  },
+  {
+    "sr": 43,
+    "ward": "GN",
+    "center_name": "Hinduja Hospital",
+    "center_category": "Private",
+    "available": "No",
+    "vaccine_name": "",
+    "remarks": ""
+  },
+  {
+    "sr": 44,
+    "ward": "GN",
+    "center_name": "Raheja Hospital, Mahim",
+    "center_category": "Private",
+    "available": "Yes",
+    "vaccine_name": "Covishield",
+    "remarks": ""
+  },
+  {
+    "sr": 45,
+    "ward": "HE",
+    "center_name": "Gurunanak Hospital",
+    "center_category": "Private",
+    "available": "Yes",
+    "vaccine_name": "Covishield",
+    "remarks": ""
+  },
+  {
+    "sr": 46,
+    "ward": "HE",
+    "center_name": "Asian Heart Institute",
+    "center_category": "Private",
+    "available": "Yes",
+    "vaccine_name": "Covishield",
+    "remarks": ""
+  },
+  {
+    "sr": 47,
+    "ward": "HE",
+    "center_name": "V.N.Desai Hospital",
+    "center_category": "MCGM",
+    "available": "Yes",
+    "vaccine_name": "Both (Covaxin only 2nd Dose)",
+    "remarks": ""
+  },
+  {
+    "sr": 48,
+    "ward": "HE",
+    "center_name": "BKC Jumbo Hospital",
+    "center_category": "MCGM",
+    "available": "Yes",
+    "vaccine_name": "Both (Covaxin only 2nd Dose)",
+    "remarks": ""
+  },
+  {
+    "sr": 49,
+    "ward": "HW",
+    "center_name": "K.B.BHABHA HOSPITAL, Bandra",
+    "center_category": "MCGM",
+    "available": "Yes",
+    "vaccine_name": "Covishield",
+    "remarks": ""
+  },
+  {
+    "sr": 50,
+    "ward": "HW",
+    "center_name": "Holy Family",
+    "center_category": "Private",
+    "available": "No",
+    "vaccine_name": "",
+    "remarks": ""
+  },
+  {
+    "sr": 51,
+    "ward": "HW",
+    "center_name": "Surya Hospital",
+    "center_category": "Private",
+    "available": "No",
+    "vaccine_name": "",
+    "remarks": ""
+  },
+  {
+    "sr": 52,
+    "ward": "HW",
+    "center_name": "Lilavati Hospital",
+    "center_category": "Private",
+    "available": "Yes",
+    "vaccine_name": "Covishield",
+    "remarks": ""
+  },
+  {
+    "sr": 53,
+    "ward": "HW",
+    "center_name": "PD Hinduja Khar",
+    "center_category": "Private",
+    "available": "No",
+    "vaccine_name": "",
+    "remarks": ""
+  },
+  {
+    "sr": 54,
+    "ward": "HW",
+    "center_name": "Mahavir Hospital",
+    "center_category": "Private",
+    "available": "No",
+    "vaccine_name": "",
+    "remarks": ""
+  },
+  {
+    "sr": 55,
+    "ward": "KE",
+    "center_name": "7 Hills Hospital",
+    "center_category": "MCGM",
+    "available": "Yes",
+    "vaccine_name": "Both (Covaxin only 2nd Dose)",
+    "remarks": ""
+  },
+  {
+    "sr": 56,
+    "ward": "KE",
+    "center_name": "HBT Trauma",
+    "center_category": "MCGM",
+    "available": "Yes",
+    "vaccine_name": "Covishield",
+    "remarks": ""
+  },
+  {
+    "sr": 57,
+    "ward": "KE",
+    "center_name": "Criticare Hospital",
+    "center_category": "Private",
+    "available": "No",
+    "vaccine_name": "",
+    "remarks": ""
+  },
+  {
+    "sr": 58,
+    "ward": "KE",
+    "center_name": "Holy Spirit",
+    "center_category": "Private",
+    "available": "No",
+    "vaccine_name": "",
+    "remarks": ""
+  },
+  {
+    "sr": 59,
+    "ward": "KE",
+    "center_name": "Shirodkar Maternity Home",
+    "center_category": "MCGM",
+    "available": "Yes",
+    "vaccine_name": "Covishield",
+    "remarks": ""
+  },
+  {
+    "sr": 60,
+    "ward": "KW",
+    "center_name": "Cooper Hospital",
+    "center_category": "MCGM",
+    "available": "No",
+    "vaccine_name": "",
+    "remarks": ""
+  },
+  {
+    "sr": 61,
+    "ward": "KW",
+    "center_name": "Kokilaben Hospital",
+    "center_category": "Private",
+    "available": "Yes",
+    "vaccine_name": "Both (Covaxin only 2nd Dose)",
+    "remarks": ""
+  },
+  {
+    "sr": 62,
+    "ward": "KW",
+    "center_name": "Nanavati hospital",
+    "center_category": "Private",
+    "available": "Yes",
+    "vaccine_name": "Both (Covaxin only 2nd Dose)",
+    "remarks": ""
+  },
+  {
+    "sr": 63,
+    "ward": "KW",
+    "center_name": "Mallika Hospital",
+    "center_category": "Private",
+    "available": "Yes",
+    "vaccine_name": "Covishield",
+    "remarks": ""
+  },
+  {
+    "sr": 64,
+    "ward": "KW",
+    "center_name": "Arogya Nidhi Hospital",
+    "center_category": "Private",
+    "available": "Yes",
+    "vaccine_name": "Covishield",
+    "remarks": ""
+  },
+  {
+    "sr": 65,
+    "ward": "KW",
+    "center_name": "Millat Dialysis Centre",
+    "center_category": "Private",
+    "available": "Yes",
+    "vaccine_name": "Covishield",
+    "remarks": ""
+  },
+  {
+    "sr": 66,
+    "ward": "KW",
+    "center_name": "BSES MG",
+    "center_category": "Private",
+    "available": "No",
+    "vaccine_name": "",
+    "remarks": ""
+  },
+  {
+    "sr": 67,
+    "ward": "PS",
+    "center_name": "NESCO Jumbo, Goregaon",
+    "center_category": "MCGM",
+    "available": "Yes",
+    "vaccine_name": "Both (Covaxin only 2nd Dose)",
+    "remarks": ""
+  },
+  {
+    "sr": 68,
+    "ward": "PS",
+    "center_name": "Gokuldham Maternity Home",
+    "center_category": "MCGM",
+    "available": "Yes",
+    "vaccine_name": "Covishield",
+    "remarks": ""
+  },
+  {
+    "sr": 69,
+    "ward": "PS",
+    "center_name": "Topiwala Dispensary",
+    "center_category": "MCGM",
+    "available": "Yes",
+    "vaccine_name": "Covishield",
+    "remarks": ""
+  },
+  {
+    "sr": 70,
+    "ward": "PS",
+    "center_name": "Meenatai Thackeray Blood Bank",
+    "center_category": "MCGM",
+    "available": "Yes",
+    "vaccine_name": "Covishield",
+    "remarks": ""
+  },
+  {
+    "sr": 71,
+    "ward": "PS",
+    "center_name": "Shree Sai Parvati Bai Clinic",
+    "center_category": "Private",
+    "available": "No",
+    "vaccine_name": "",
+    "remarks": ""
+  },
+  {
+    "sr": 72,
+    "ward": "PS",
+    "center_name": "Lifeline Medicare Hospital",
+    "center_category": "Private",
+    "available": "Yes",
+    "vaccine_name": "Covaxin only 2nd Dose",
+    "remarks": ""
+  },
+  {
+    "sr": 73,
+    "ward": "PS",
+    "center_name": "Motilal Nagar Health Post",
+    "center_category": "MCGM",
+    "available": "Yes",
+    "vaccine_name": "Covishield",
+    "remarks": ""
+  },
+  {
+    "sr": 74,
+    "ward": "PN",
+    "center_name": "S K Patil Hospital",
+    "center_category": "MCGM",
+    "available": "Yes",
+    "vaccine_name": "Both (Covaxin only 2nd Dose)",
+    "remarks": ""
+  },
+  {
+    "sr": 75,
+    "ward": "PN",
+    "center_name": "MW Desai Hospital",
+    "center_category": "MCGM",
+    "available": "Yes",
+    "vaccine_name": "Covishield",
+    "remarks": ""
+  },
+  {
+    "sr": 76,
+    "ward": "PN",
+    "center_name": "SHREE BALAJI SUPER SPECIALITY HOSPITAL",
+    "center_category": "Private",
+    "available": "No",
+    "vaccine_name": "",
+    "remarks": ""
+  },
+  {
+    "sr": 77,
+    "ward": "PN",
+    "center_name": "Riddhi Vinayak, Critical Care & Cardiac Centre",
+    "center_category": "Private",
+    "available": "No",
+    "vaccine_name": "",
+    "remarks": ""
+  },
+  {
+    "sr": 78,
+    "ward": "PN",
+    "center_name": "Sanjeevani Hospital",
+    "center_category": "Private",
+    "available": "Yes",
+    "vaccine_name": "Covishield",
+    "remarks": ""
+  },
+  {
+    "sr": 79,
+    "ward": "PN",
+    "center_name": "Thunga Hospital",
+    "center_category": "Private",
+    "available": "No",
+    "vaccine_name": "",
+    "remarks": ""
+  },
+  {
+    "sr": 80,
+    "ward": "PN",
+    "center_name": "Life Line Multispeciality Hospital",
+    "center_category": "Private",
+    "available": "Yes",
+    "vaccine_name": "Covishield",
+    "remarks": ""
+  },
+  {
+    "sr": 81,
+    "ward": "PN",
+    "center_name": "Surana Hospital & Research Centre",
+    "center_category": "Private",
+    "available": "Yes",
+    "vaccine_name": "Covishield",
+    "remarks": ""
+  },
+  {
+    "sr": 82,
+    "ward": "PN",
+    "center_name": "Malwani Government Hospital",
+    "center_category": "State",
+    "available": "Yes",
+    "vaccine_name": "Covishield",
+    "remarks": ""
+  },
+  {
+    "sr": 83,
+    "ward": "PN",
+    "center_name": "Chowksi Maternity Home",
+    "center_category": "MCGM",
+    "available": "Yes",
+    "vaccine_name": "Covishield",
+    "remarks": ""
+  },
+  {
+    "sr": 84,
+    "ward": "PN",
+    "center_name": "Appapada Maternity Home",
+    "center_category": "MCGM",
+    "available": "Yes",
+    "vaccine_name": "Covishield",
+    "remarks": ""
+  },
+  {
+    "sr": 85,
+    "ward": "RS",
+    "center_name": "BDBA Hospital",
+    "center_category": "MCGM",
+    "available": "Yes",
+    "vaccine_name": "Both (Covaxin only 2nd Dose)",
+    "remarks": ""
+  },
+  {
+    "sr": 86,
+    "ward": "RS",
+    "center_name": "Oscar Hospital",
+    "center_category": "Private",
+    "available": "No",
+    "vaccine_name": "",
+    "remarks": ""
+  },
+  {
+    "sr": 87,
+    "ward": "RS",
+    "center_name": "Shivam Hospital",
+    "center_category": "Private",
+    "available": "No",
+    "vaccine_name": "",
+    "remarks": ""
+  },
+  {
+    "sr": 88,
+    "ward": "RS",
+    "center_name": "Seven Star Hospital",
+    "center_category": "Private",
+    "available": "No",
+    "vaccine_name": "",
+    "remarks": ""
+  },
+  {
+    "sr": 89,
+    "ward": "RS",
+    "center_name": "Kandivali Hitwardhak Mandal",
+    "center_category": "Private",
+    "available": "Yes",
+    "vaccine_name": "Covishield",
+    "remarks": ""
+  },
+  {
+    "sr": 90,
+    "ward": "RS",
+    "center_name": "ESIS Hospital, Kandivali",
+    "center_category": "State",
+    "available": "Yes",
+    "vaccine_name": "Covishield",
+    "remarks": ""
+  },
+  {
+    "sr": 91,
+    "ward": "RS",
+    "center_name": "Charkop Sector 1 Dispensary",
+    "center_category": "MCGM",
+    "available": "Yes",
+    "vaccine_name": "Covishield",
+    "remarks": ""
+  },
+  {
+    "sr": 92,
+    "ward": "RS",
+    "center_name": "Akurli Maternity Home",
+    "center_category": "MCGM",
+    "available": "Yes",
+    "vaccine_name": "Covishield",
+    "remarks": ""
+  },
+  {
+    "sr": 93,
+    "ward": "RN",
+    "center_name": "HCG Apex Cancer Centre",
+    "center_category": "Private",
+    "available": "Yes",
+    "vaccine_name": "Covishield",
+    "remarks": ""
+  },
+  {
+    "sr": 94,
+    "ward": "RN",
+    "center_name": "Karuna Hospital",
+    "center_category": "Private",
+    "available": "No",
+    "vaccine_name": "",
+    "remarks": ""
+  },
+  {
+    "sr": 95,
+    "ward": "RN",
+    "center_name": "Dahisar Jumbo",
+    "center_category": "MCGM",
+    "available": "Yes",
+    "vaccine_name": "Both (Covaxin only 2nd Dose)",
+    "remarks": ""
+  },
+  {
+    "sr": 96,
+    "ward": "RN",
+    "center_name": "Bhagvati Hospital",
+    "center_category": "MCGM",
+    "available": "Yes",
+    "vaccine_name": "Covishield",
+    "remarks": ""
+  },
+  {
+    "sr": 97,
+    "ward": "RC",
+    "center_name": "Krantijyoti Savitribai Phule",
+    "center_category": "MCGM",
+    "available": "Yes",
+    "vaccine_name": "Covishield",
+    "remarks": ""
+  },
+  {
+    "sr": 98,
+    "ward": "L",
+    "center_name": "Kurla Bhabha",
+    "center_category": "MCGM",
+    "available": "Yes",
+    "vaccine_name": "Covishield",
+    "remarks": ""
+  },
+  {
+    "sr": 99,
+    "ward": "L",
+    "center_name": "Kohinoor Hospital",
+    "center_category": "Private",
+    "available": "Yes",
+    "vaccine_name": "Covaxin only 2nd Dose",
+    "remarks": ""
+  },
+  {
+    "sr": 100,
+    "ward": "L",
+    "center_name": "Dalvi Nursing Home",
+    "center_category": "Private",
+    "available": "Yes",
+    "vaccine_name": "Covishield",
+    "remarks": ""
+  },
+  {
+    "sr": 101,
+    "ward": "ME",
+    "center_name": "Centenary Govandi Hospital",
+    "center_category": "MCGM",
+    "available": "Yes",
+    "vaccine_name": "Covishield",
+    "remarks": ""
+  },
+  {
+    "sr": 102,
+    "ward": "ME",
+    "center_name": "RCF",
+    "center_category": "State",
+    "available": "Yes",
+    "vaccine_name": "Both (Covaxin only 2nd Dose)",
+    "remarks": ""
+  },
+  {
+    "sr": 103,
+    "ward": "ME",
+    "center_name": "BARC",
+    "center_category": "State",
+    "available": "Yes",
+    "vaccine_name": "Both (Covaxin only 2nd Dose)",
+    "remarks": ""
+  },
+  {
+    "sr": 104,
+    "ward": "ME",
+    "center_name": "Deonar Maternity Home",
+    "center_category": "MCGM",
+    "available": "Yes",
+    "vaccine_name": "Covishield",
+    "remarks": ""
+  },
+  {
+    "sr": 105,
+    "ward": "ME",
+    "center_name": "Shivaji Nagar Centre",
+    "center_category": "MCGM",
+    "available": "Yes",
+    "vaccine_name": "Covishield",
+    "remarks": ""
+  },
+  {
+    "sr": 106,
+    "ward": "MW",
+    "center_name": "Maa Hospital",
+    "center_category": "MCGM",
+    "available": "Yes",
+    "vaccine_name": "Both (Covaxin only 2nd Dose)",
+    "remarks": ""
+  },
+  {
+    "sr": 107,
+    "ward": "MW",
+    "center_name": "SUSHRUT HOSPITAL AND RESEARCH CENTRE",
+    "center_category": "Private",
+    "available": "Yes",
+    "vaccine_name": "Covishield",
+    "remarks": ""
+  },
+  {
+    "sr": 108,
+    "ward": "MW",
+    "center_name": "Rane Hospital Pvt Ltd",
+    "center_category": "Private",
+    "available": "No",
+    "vaccine_name": "",
+    "remarks": ""
+  },
+  {
+    "sr": 109,
+    "ward": "MW",
+    "center_name": "Zen Hospital",
+    "center_category": "Private",
+    "available": "No",
+    "vaccine_name": "",
+    "remarks": ""
+  },
+  {
+    "sr": 110,
+    "ward": "MW",
+    "center_name": "SRV Hospital Chembur",
+    "center_category": "Private",
+    "available": "No",
+    "vaccine_name": "",
+    "remarks": ""
+  },
+  {
+    "sr": 111,
+    "ward": "MW",
+    "center_name": "Inlaks General Hospital",
+    "center_category": "Private",
+    "available": "Yes",
+    "vaccine_name": "Both (Covaxin only 2nd Dose)",
+    "remarks": ""
+  },
+  {
+    "sr": 112,
+    "ward": "MW",
+    "center_name": "Surana Sethia Hospital Research Centre",
+    "center_category": "Private",
+    "available": "No",
+    "vaccine_name": "",
+    "remarks": ""
+  },
+  {
+    "sr": 113,
+    "ward": "N",
+    "center_name": "Rajawadi Hospital",
+    "center_category": "MCGM",
+    "available": "Yes",
+    "vaccine_name": "Both (Covaxin only 2nd Dose)",
+    "remarks": ""
+  },
+  {
+    "sr": 114,
+    "ward": "N",
+    "center_name": "H. J. Doshi Ghatkopar Hindu Sabha Hospital",
+    "center_category": "Private",
+    "available": "Yes",
+    "vaccine_name": "Both (Covaxin only 2nd Dose)",
+    "remarks": ""
+  },
+  {
+    "sr": 115,
+    "ward": "N",
+    "center_name": "Parakh Hospital",
+    "center_category": "Private",
+    "available": "Yes",
+    "vaccine_name": "Covishield",
+    "remarks": ""
+  },
+  {
+    "sr": 116,
+    "ward": "N",
+    "center_name": "Sapana Health Care Centre",
+    "center_category": "Private",
+    "available": "Yes",
+    "vaccine_name": "Covishield",
+    "remarks": ""
+  },
+  {
+    "sr": 117,
+    "ward": "N",
+    "center_name": "Sarvodaya Hospital",
+    "center_category": "Private",
+    "available": "Yes",
+    "vaccine_name": "Covishield",
+    "remarks": ""
+  },
+  {
+    "sr": 118,
+    "ward": "N",
+    "center_name": "Godrej Memorial Hospital",
+    "center_category": "Private",
+    "available": "Yes",
+    "vaccine_name": "Both (Covaxin only 2nd Dose)",
+    "remarks": ""
+  },
+  {
+    "sr": 119,
+    "ward": "N",
+    "center_name": "Ramabai Thakre Mat Home",
+    "center_category": "MCGM",
+    "available": "No",
+    "vaccine_name": "",
+    "remarks": ""
+  },
+  {
+    "sr": 120,
+    "ward": "N",
+    "center_name": "Shantiniketan Hospital",
+    "center_category": "Private",
+    "available": "Yes",
+    "vaccine_name": "Covishield",
+    "remarks": ""
+  },
+  {
+    "sr": 121,
+    "ward": "N",
+    "center_name": "Ganesh Nagar HP",
+    "center_category": "MCGM",
+    "available": "No",
+    "vaccine_name": "",
+    "remarks": ""
+  },
+  {
+    "sr": 122,
+    "ward": "N",
+    "center_name": "Sant Muktabai General Hospital",
+    "center_category": "MCGM",
+    "available": "No",
+    "vaccine_name": "",
+    "remarks": ""
+  },
+  {
+    "sr": 123,
+    "ward": "S",
+    "center_name": "LH Hiranandani Hospital",
+    "center_category": "Private",
+    "available": "No",
+    "vaccine_name": "",
+    "remarks": ""
+  },
+  {
+    "sr": 124,
+    "ward": "S",
+    "center_name": "Dr.Meenas Multispeciality Hospital , Bhandup",
+    "center_category": "Private",
+    "available": "No",
+    "vaccine_name": "",
+    "remarks": ""
+  },
+  {
+    "sr": 125,
+    "ward": "S",
+    "center_name": "LBS Marg Maternity Home",
+    "center_category": "MCGM",
+    "available": "Yes",
+    "vaccine_name": "Both (Covaxin only 2nd Dose)",
+    "remarks": ""
+  },
+  {
+    "sr": 126,
+    "ward": "S",
+    "center_name": "Dr. Bhatiya Hospital",
+    "center_category": "Private",
+    "available": "No",
+    "vaccine_name": "",
+    "remarks": ""
+  },
+  {
+    "sr": 127,
+    "ward": "S",
+    "center_name": "KMJ Phule Hospital",
+    "center_category": "MCGM",
+    "available": "Yes",
+    "vaccine_name": "Both (Covaxin only 2nd Dose)",
+    "remarks": ""
+  },
+  {
+    "sr": 128,
+    "ward": "S",
+    "center_name": "Fortis Mulund",
+    "center_category": "Private",
+    "available": "No",
+    "vaccine_name": "",
+    "remarks": ""
+  },
+  {
+    "sr": 129,
+    "ward": "S",
+    "center_name": "Sushrusha Hospital Vikhroli",
+    "center_category": "Private",
+    "available": "Yes",
+    "vaccine_name": "Both (Covaxin only 2nd Dose)",
+    "remarks": ""
+  },
+  {
+    "sr": 130,
+    "ward": "S",
+    "center_name": "IIT Bombay Hospital",
+    "center_category": "State",
+    "available": "No",
+    "vaccine_name": "",
+    "remarks": ""
+  },
+  {
+    "sr": 131,
+    "ward": "T",
+    "center_name": "V.D.Savarkar Hospital",
+    "center_category": "MCGM",
+    "available": "Yes",
+    "vaccine_name": "Covishield",
+    "remarks": ""
+  },
+  {
+    "sr": 132,
+    "ward": "T",
+    "center_name": "Ashirwad Critical Care Hospital",
+    "center_category": "Private",
+    "available": "No",
+    "vaccine_name": "",
+    "remarks": ""
+  },
+  {
+    "sr": 133,
+    "ward": "T",
+    "center_name": "PLATINUM HOSPITAL",
+    "center_category": "Private",
+    "available": "No",
+    "vaccine_name": "",
+    "remarks": ""
+  },
+  {
+    "sr": 134,
+    "ward": "T",
+    "center_name": "Mithaghar Municipal School",
+    "center_category": "MCGM",
+    "available": "Yes",
+    "vaccine_name": "Covishield",
+    "remarks": ""
+  },
+  {
+    "sr": 135,
+    "ward": "T",
+    "center_name": "MT Agrawal Hospital",
+    "center_category": "MCGM",
+    "available": "Yes",
+    "vaccine_name": "Covishield",
+    "remarks": ""
+  }
+]

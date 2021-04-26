@@ -1,0 +1,99 @@
+body {
+  font-family: Montserrat, sans-serif;
+  --bs-font-sans-serif: Montserrat, Roboto, sans-serif;
+}
+
+/* Scrollbar */
+Body::-webkit-scrollbar {
+  width: 15px;
+  height: 15px;
+}
+
+Body::-webkit-scrollbar-track {
+  background-color: rgba(0, 96, 100, 0.08);
+}
+
+Body::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(45deg, #006064, #26c6da);
+}
+
+table.dataTable {
+  border-collapse: collapse !important;
+  margin-top: 0px !important;
+}
+
+/* Table */
+.custom-table tr {
+  border-top: 1px solid #006064 !important;
+  border-bottom: 1px solid #006064 !important;
+  border-left: 1px solid #006064;
+  border-right: 1px solid #006064;
+}
+
+.custom-table th {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #006064;
+  color: #fff;
+  border-top: 1px solid #006064 !important;
+  border-bottom: 1px solid #006064 !important;
+  border-left: 1x solid #e0f7fa;
+  border-right: 1px solid #e0f7fa;
+}
+
+.custom-table th:first-child {
+  border-left: 1px solid #006064;
+}
+
+.custom-table th:nth-last-child(1) {
+  border-right: 1px solid #006064;
+}
+
+.custom-table td {
+  border-left: 0.5px solid #006064;
+  border-right: 0.5px solid #006064;
+  border-top: none !important;
+}
+
+.custom-table :not(:last-child) > :last-child > * {
+  border-bottom-color: #006064;
+  border-bottom: 0.5px solid #006064;
+}
+
+.custom-table tr.group,
+.custom-table tr.group:hover {
+  background-color: #e0f7fa;
+  font-weight: bold;
+  color: #006064;
+  border-top: 1px solid #006064 !important;
+  border-bottom: 1px solid #006064 !important;
+  border-left: 1px solid #006064;
+  border-right: 1px solid #006064;
+}
+
+.custom-table .group .bg-danger {
+  font-size: 15px;
+}
+
+.source-link {
+  color: #006064 !important;
+  text-decoration: none;
+}
+
+.source-link:hover {
+  text-decoration: underline;
+}
+
+.available-no {
+  display: none;
+  /*
+  opacity: 0.75;
+  -webkit-touch-callout: none; // iOS Safari
+  -webkit-user-select: none; // Safari
+  -khtml-user-select: none; // Konqueror HTML
+  -moz-user-select: none; // Old versions of Firefox
+  -ms-user-select: none; // Internet Explorer/Edge
+  user-select: none; // Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox
+  */
+}
+/*# sourceMappingURL=stylesheet.css.map */
