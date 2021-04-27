@@ -1,49 +1,80 @@
-/*  $(document).ready(function() {
-        $('#data-table').DataTable({
-            "ajax": {
-                "url": "./mumbai-data/vaccination-centers.json",
-                "dataSrc": ""
-            },
-            scrollY: '70vh', // Scrollable table fixed top - display vertical height
-            scrollCollapse: true, // Scrollable table fixed top
-            paging: false, // Remove Paging
-            "searching": false, // Hiding default Search Box
-            "ordering": false,
-            "info": false, // Remove info "Data Page 1 of 100"
-            // "dom": '<"top"i>rt<"bottom"lp><"clear">', // Hiding default Search Box 2
+/* OG DATA PROCESS
 
-            "columns": [{
-                    "data": "sr"
-                },
-                {
-                    "data": "ward"
-                },
-                {
-                    "data": "vaccinationCentre"
-                },
-                {
-                    "data": "facilityCategory"
-                },
-                {
-                    "data": "functionalTomorrow"
-                },
-                {
-                    "data": "remarks"
-                }
-            ]
-        });
-    }); 
-    */
+let xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function () {
+  if (this.readyState == 4 && this.status == 200) {
+    let data = JSON.parse(this.responseText).feed.entry;
+
+    let i;
+    for (i = 0; i < data.length; i++) {
+      let sr = data[i]["gsx$srno"]["$t"];
+      let ward = data[i]["gsx$ward"]["$t"];
+      let location = data[i]["gsx$location"]["$t"];
+      let center_name = data[i]["gsx$nameofactivevaccinationcentre"]["$t"];
+      let center_category = data[i]["gsx$facilitycategory"]["$t"];
+      let available = data[i]["gsx$functionalondate"]["$t"];
+      let vaccine_name = data[i]["gsx$covaxincovishield"]["$t"];
+      let remarks = data[i]["gsx$remarks"]["$t"];
+
+      document.getElementById("data-sheet").innerHTML +=
+        "<tr>" +
+        "<td>" +
+        sr +
+        "</td>" +
+        "<td>" +
+        ward +
+        "</td>" +
+        "<td>" +
+        location +
+        "</td>" +
+        "<td>" +
+        center_name +
+        "</td>" +
+        "<td>" +
+        center_category +
+        "</td>" +
+        "<td>" +
+        available +
+        "</td>" +
+        "<td>" +
+        vaccine_name +
+        "</td>" +
+        "<td>" +
+        remarks +
+        "</td>" +
+        "</tr>";
+    }
+  }
+};
+
+xmlhttp.open(
+  "GET",
+  "https://spreadsheets.google.com/feeds/list/1O3v5jAmt_8JUyyK2NT_h33bFraTcYPHjmtD5Lkuk6VE/od6/public/values?alt=json",
+  true
+);
+xmlhttp.send();
+
+
+gsx$srno.$t
+gsx$ward.$t
+gsx$location.$t
+gsx$nameofactivevaccinationcentre.$t
+gsx$facilitycategory.$t
+gsx$functionalondate.$t
+gsx$covaxincovishield.$t
+gsx$remarks.$t
+
+
+*/
 
 $(document).ready(function () {
   var groupColumn = 1;
   var table = $("#data-table").DataTable({
     ajax: {
-      url: "./mumbai-data/vaccination-centers.json",
-      dataSrc: "",
+      url:
+        "https://spreadsheets.google.com/feeds/list/1O3v5jAmt_8JUyyK2NT_h33bFraTcYPHjmtD5Lkuk6VE/od6/public/values?alt=json",
+      dataSrc: "feed.entry",
     },
-    renderer: "bootstrap",
-    // dom: '<"top"i>rt<"bottom"><"clear">',
     searching: true,
     // scrollY: '70vh', // Scrollable table fixed top - display vertical height
     // scrollCollapse: true, // Scrollable table fixed top
@@ -51,51 +82,50 @@ $(document).ready(function () {
     fixedHeader: true,
     ordering: true,
     info: false, // Remove info "Data Page 1 of 100"
-
     columns: [
       {
-        data: "sr",
+        data: "gsx$srno.$t",
         searchable: false,
         // className: "text-center col-1",
         orderable: false,
         visible: false,
       },
       {
-        data: "ward",
+        data: "gsx$ward.$t",
         searchable: false,
       },
       {
-        data: "location",
+        data: "gsx$location.$t",
         searchable: true,
         className: "col td-bg",
         orderable: false,
       },
       {
-        data: "center_name",
+        data: "gsx$nameofactivevaccinationcentre.$t",
         searchable: true,
         className: "col td-bg",
         orderable: false,
       },
       {
-        data: "center_category",
+        data: "gsx$facilitycategory.$t",
         searchable: false,
         className: "col text-center td-bg",
         orderable: false,
       },
       {
-        data: "available",
+        data: "gsx$functionalondate.$t",
         searchable: false,
         className: "col text-center td-bg",
         orderable: false,
       },
       {
-        data: "vaccine_name",
+        data: "gsx$covaxincovishield.$t",
         searchable: false,
         className: "col td-bg",
         orderable: false,
       },
       {
-        data: "remarks",
+        data: "gsx$remarks.$t",
         searchable: false,
         className: "col td-bg",
         orderable: false,
@@ -151,21 +181,24 @@ $(document).ready(function () {
 
     // Not Available = Yes, No
     createdRow: function (row, data, dataIndex) {
-      if (data.available == "No") {
+      if (data.gsx$functionalondate.$t == "No") {
         $(row).addClass("text-muted available-no");
+      }
+      if (data.gsx$functionalondate.$t == "Stock Exhausted") {
+        $(row).addClass("text-danger stock-exhausted");
       }
     },
   });
 
   /*  Search Single Column
-  $("#mySearch").on("keyup click", function () {
-    table.column(2).search("^" + $(this).val() + "$", true);
-    if (table.page.info().recordsDisplay != 1) {
-      table.column(2).search("^" + $(this).val(), true);
-    }
-
-    table.draw();
-  }); */
+      $("#mySearch").on("keyup click", function () {
+        table.column(2).search("^" + $(this).val() + "$", true);
+        if (table.page.info().recordsDisplay != 1) {
+          table.column(2).search("^" + $(this).val(), true);
+        }
+    
+        table.draw();
+      }); */
 });
 
 $(document).ready(function () {

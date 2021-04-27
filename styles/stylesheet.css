@@ -34,6 +34,12 @@ table.dataTable {
 .custom-table {
   font-weight: 600;
   max-width: 85%;
+  background-color: #fff;
+  /*
+   tbody .td-bg {
+    background-color: #fff;
+  } 
+  */
 }
 
 .custom-table tr {
@@ -91,10 +97,6 @@ table.dataTable {
   background-color: #f9f9f9;
 }
 
-.custom-table tbody .td-bg {
-  background-color: #fff;
-}
-
 .custom-table td.dataTables_empty {
   height: 10rem;
   vertical-align: middle;
@@ -124,6 +126,10 @@ table.dataTable {
   */
 }
 
+.stock-exhausted {
+  background-color: #fff5dd;
+}
+
 .custom-date {
   border-bottom: 2px solid #dc3545;
 }
@@ -132,6 +138,7 @@ table.dataTable {
 .search-class {
   padding-right: 0;
   padding-left: 0;
+  max-width: 1321px;
 }
 
 .search-class .form-control {
