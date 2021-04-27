@@ -163,21 +163,14 @@ table.dataTable {
 }
 
 .table-footer {
-  .nav-pills {
+  .nav {
     a {
       color: #006064;
+
       border-radius: 0;
       &:hover {
-        color: #0097a7;
-      }
-    }
-    .active {
-      background-color: #006064;
-      border: 1px solid #006064;
-
-      &:hover {
-        color: #006064;
-        background-color: transparent;
+        background-color: #006064;
+        color: #fff;
       }
     }
   }

@@ -167,22 +167,13 @@ table.dataTable {
   display: initial;
 }
 
-.table-footer .nav-pills a {
+.table-footer .nav a {
   color: #006064;
   border-radius: 0;
 }
 
-.table-footer .nav-pills a:hover {
-  color: #0097a7;
-}
-
-.table-footer .nav-pills .active {
+.table-footer .nav a:hover {
   background-color: #006064;
-  border: 1px solid #006064;
-}
-
-.table-footer .nav-pills .active:hover {
-  color: #006064;
-  background-color: transparent;
+  color: #fff;
 }
 /*# sourceMappingURL=stylesheet.css.map */
