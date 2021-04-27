@@ -69,13 +69,15 @@
         </h3>
       </div>
       <!-- Search -->
-      <!-- <input type="text" id="searchInput" placeholder="Center Name Search..." /> -->
-
+      <div class="container-md py-3 search-class">
+        <div id="search-area"></div>
+      </div>
+      <!-- <input type="text" id="searchInput" placeholder="Center Name Search..."/> -->
       <!-- Search -->
       <div class="table-responsive-md">
         <table
           id="data-table"
-          class="table table-responsive custom-table table-hover mx-auto w-auto"
+          class="table custom-table table-hover mx-auto w-auto"
         >
           <thead class="table-header">
             <tr>
@@ -89,14 +91,23 @@
               <th class="align-middle text-center">Remarks</th>
             </tr>
           </thead>
-          <tfoot>
+          <tfoot class="table-footer">
             <tr>
               <td colspan="4" class="text-muted">
                 Last Updated: April 27, 2021
                 <span class="badge bg-secondary"> 01:55 (IST) </span>
               </td>
               <td colspan="4">
-                <a
+                <nav class="nav nav-pills nav-justified">
+                  <a
+                    class="nav-link active"
+                    href="https://twitter.com/mybmc/status/1386751788523556865"
+                    >Source</a
+                  >
+                  <a class="nav-link" href="#">Update 1</a>
+                  <a class="nav-link" href="#">Update 2</a>
+                </nav>
+                <!-- <a
                   class="source-link"
                   target="_blank"
                   href="https://twitter.com/mybmc/status/1386751788523556865"
@@ -106,11 +117,11 @@
                 -
                 <a class="source-link" target="_blank" href="">Update 1</a>
                 |
-                <a class="source-link" target="_blank" href="">Update 2</a>
+                <a class="source-link" target="_blank" href="">Update 2</a> -->
               </td>
             </tr>
             <tr>
-              <td colspan="8" class="text-center">
+              <td colspan="8" class="text-center py-3">
                 <a
                   class="source-link"
                   target="_blank"

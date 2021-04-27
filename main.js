@@ -43,8 +43,8 @@ $(document).ready(function () {
       dataSrc: "",
     },
     renderer: "bootstrap",
-
-    searching: false,
+    // dom: '<"top"i>rt<"bottom"><"clear">',
+    searching: true,
     // scrollY: '70vh', // Scrollable table fixed top - display vertical height
     // scrollCollapse: true, // Scrollable table fixed top
     paging: false, // Remove Paging
@@ -137,10 +137,38 @@ $(document).ready(function () {
         });
     },
 
+    // Search Start //
+
+    initComplete: function () {
+      $("#data-table_filter").detach().appendTo("#search-area");
+    },
+    language: {
+      search: "",
+      searchPlaceholder: "Search Location or Center Name...",
+    },
+
+    // Search End //
+
+    // Not Available = Yes, No
     createdRow: function (row, data, dataIndex) {
       if (data.available == "No") {
         $(row).addClass("text-muted available-no");
       }
     },
   });
+
+  /*  Search Single Column
+  $("#mySearch").on("keyup click", function () {
+    table.column(2).search("^" + $(this).val() + "$", true);
+    if (table.page.info().recordsDisplay != 1) {
+      table.column(2).search("^" + $(this).val(), true);
+    }
+
+    table.draw();
+  }); */
+});
+
+$(document).ready(function () {
+  $("#data-table").dataTable();
+  $("#data-table_filter input").removeClass("form-control-sm"); // <-- add this line
 });
