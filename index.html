@@ -65,7 +65,7 @@
         <h3 class="text-center pb-3">
           <img src="./assets/mumbaicvc.svg" width="75" height="75" />
           Mumbai Functional COVID Vaccine Centers on
-          <b class="custom-date">27 <sup>th</sup> April, 2021 </b>
+          <b class="custom-date">28<sup>th</sup> April, 2021</b>
         </h3>
       </div>
       <!-- Search -->
@@ -95,8 +95,8 @@
           <tfoot class="table-footer">
             <tr>
               <td colspan="4" class="text-muted text-center">
-                Last Updated: April 27, 2021
-                <span class="badge bg-secondary"> 01:55 (IST) </span>
+                Last Updated:
+                <span id="formatted-date">28 April 2021, 12:35 (IST)</span>
               </td>
               <td colspan="4">
                 <nav class="nav nav-justified">
@@ -143,5 +143,20 @@
       </div>
     </div>
     <script type="text/javascript" src="main.js"></script>
+
+    <!-- <script>
+      const elFormattedDate = document.getElementById("formatted-date");
+
+      $.getJSON(
+        "https://spreadsheets.google.com/feeds/list/1O3v5jAmt_8JUyyK2NT_h33bFraTcYPHjmtD5Lkuk6VE/od6/public/values?alt=json",
+
+        function (data) {
+          var formattedDate = new Date(data.feed.updated.$t).toLocaleString(
+            "en-IN"
+          );
+          elFormattedDate.innerHTML = formattedDate;
+        }
+      );
+    </script> -->
   </body>
 </html>

@@ -113,7 +113,7 @@ table.dataTable {
   text-decoration: underline;
 }
 
-.available-no {
+.status-no {
   display: none;
   /*
   opacity: 0.75;
@@ -126,7 +126,7 @@ table.dataTable {
   */
 }
 
-.stock-exhausted {
+.status-exhausted {
   background-color: #fff5dd;
 }
 

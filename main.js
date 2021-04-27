@@ -1,72 +1,3 @@
-/* OG DATA PROCESS
-
-let xmlhttp = new XMLHttpRequest();
-xmlhttp.onreadystatechange = function () {
-  if (this.readyState == 4 && this.status == 200) {
-    let data = JSON.parse(this.responseText).feed.entry;
-
-    let i;
-    for (i = 0; i < data.length; i++) {
-      let sr = data[i]["gsx$srno"]["$t"];
-      let ward = data[i]["gsx$ward"]["$t"];
-      let location = data[i]["gsx$location"]["$t"];
-      let center_name = data[i]["gsx$nameofactivevaccinationcentre"]["$t"];
-      let center_category = data[i]["gsx$facilitycategory"]["$t"];
-      let available = data[i]["gsx$functionalondate"]["$t"];
-      let vaccine_name = data[i]["gsx$covaxincovishield"]["$t"];
-      let remarks = data[i]["gsx$remarks"]["$t"];
-
-      document.getElementById("data-sheet").innerHTML +=
-        "<tr>" +
-        "<td>" +
-        sr +
-        "</td>" +
-        "<td>" +
-        ward +
-        "</td>" +
-        "<td>" +
-        location +
-        "</td>" +
-        "<td>" +
-        center_name +
-        "</td>" +
-        "<td>" +
-        center_category +
-        "</td>" +
-        "<td>" +
-        available +
-        "</td>" +
-        "<td>" +
-        vaccine_name +
-        "</td>" +
-        "<td>" +
-        remarks +
-        "</td>" +
-        "</tr>";
-    }
-  }
-};
-
-xmlhttp.open(
-  "GET",
-  "https://spreadsheets.google.com/feeds/list/1O3v5jAmt_8JUyyK2NT_h33bFraTcYPHjmtD5Lkuk6VE/od6/public/values?alt=json",
-  true
-);
-xmlhttp.send();
-
-
-gsx$srno.$t
-gsx$ward.$t
-gsx$location.$t
-gsx$nameofactivevaccinationcentre.$t
-gsx$facilitycategory.$t
-gsx$functionalondate.$t
-gsx$covaxincovishield.$t
-gsx$remarks.$t
-
-
-*/
-
 $(document).ready(function () {
   var groupColumn = 1;
   var table = $("#data-table").DataTable({
@@ -75,11 +6,11 @@ $(document).ready(function () {
         "https://spreadsheets.google.com/feeds/list/1O3v5jAmt_8JUyyK2NT_h33bFraTcYPHjmtD5Lkuk6VE/od6/public/values?alt=json",
       dataSrc: "feed.entry",
     },
-    searching: true,
+    searching: true, // Enable Search
     // scrollY: '70vh', // Scrollable table fixed top - display vertical height
     // scrollCollapse: true, // Scrollable table fixed top
     paging: false, // Remove Paging
-    fixedHeader: true,
+    fixedHeader: true, // Sticky Header
     ordering: true,
     info: false, // Remove info "Data Page 1 of 100"
     columns: [
@@ -182,10 +113,10 @@ $(document).ready(function () {
     // Not Available = Yes, No
     createdRow: function (row, data, dataIndex) {
       if (data.gsx$functionalondate.$t == "No") {
-        $(row).addClass("text-muted available-no");
+        $(row).addClass("text-muted status-no");
       }
       if (data.gsx$functionalondate.$t == "Stock Exhausted") {
-        $(row).addClass("text-danger stock-exhausted");
+        $(row).addClass("text-danger status-exhausted");
       }
     },
   });
@@ -201,7 +132,9 @@ $(document).ready(function () {
       }); */
 });
 
+// Location change of Search input
+
 $(document).ready(function () {
   $("#data-table").dataTable();
-  $("#data-table_filter input").removeClass("form-control-sm"); // <-- add this line
+  $("#data-table_filter input").removeClass("form-control-sm");
 });
