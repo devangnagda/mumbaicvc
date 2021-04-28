@@ -118,6 +118,10 @@ $(document).ready(function () {
       if (data.gsx$functionalondate.$t == "Stock Exhausted") {
         $(row).addClass("text-danger status-exhausted");
       }
+
+      if (data.gsx$functionalondate.$t == "") {
+        $(row).addClass("d-none");
+      }
     },
   });
 
