@@ -80,7 +80,7 @@
         <h3 class="text-center">
           <img src="./assets/mumbaicvc.svg" width="75" height="75" />
           Mumbai Functional COVID Vaccine Centers on
-          <b class="custom-date">29<sup>th</sup> April, 2021</b>
+          <b id="todays-date" class="custom-date"></b>
         </h3>
         <h5 class="text-center">
           All Govt. & MCGM CVCs will be functional post
@@ -118,17 +118,16 @@
           <tfoot class="table-footer">
             <tr>
               <td colspan="4" class="text-muted text-center">
-                Last Updated:
-                <span id="formatted-date">29 April 2021, 01:25 AM (IST)</span>
+                <span id="last-updated-date"></span>
               </td>
               <td colspan="4">
-                <nav class="nav nav-justified">
-                  <a
+                <nav class="nav nav-justified" id="source-details">
+                  <!-- <a
                     class="nav-link"
                     href="https://twitter.com/mybmc/status/1387483252072407044"
                     >Source</a
                   >
-                  <!-- <a
+                   <a
                     class="nav-link"
                     href="https://twitter.com/mybmc/status/1387267369467191296"
                     >Update 1</a
@@ -174,7 +173,7 @@
       </div>
     </div>
     <script type="text/javascript" src="main.js"></script>
-
+    <div class="results"></div>
     <!-- <script>
       const elFormattedDate = document.getElementById("formatted-date");
 
@@ -189,5 +188,47 @@
         }
       );
     </script> -->
+
+    <script>
+      // ID of the Google Spreadsheet
+      var spreadsheetID = "1O3v5jAmt_8JUyyK2NT_h33bFraTcYPHjmtD5Lkuk6VE";
+
+      // Make sure it is public or set to Anyone with link can view
+      var url =
+        "https://spreadsheets.google.com/feeds/list/" +
+        spreadsheetID +
+        "/2/public/values?alt=json";
+
+      $.getJSON(url, function (data) {
+        var entry = data.feed.entry;
+
+        $(entry).each(function () {
+          var todays_date = document.getElementById("todays-date");
+          todays_date.innerHTML = this.gsx$todaysdate.$t;
+
+          var last_updated_date = document.getElementById("last-updated-date");
+          last_updated_date.innerHTML =
+            "Last Updated: " + this.gsx$lastupdated.$t;
+
+          var source_details = document.getElementById("source-details");
+          
+           
+          if (this.gsx$source.$t !== "") {
+            source_details.innerHTML = '<a class="nav-link" href="' + this.gsx$source.$t + '" target="_blank">Source</a>';
+          }
+          if (this.gsx$update1.$t !== "") {
+            source_details.innerHTML = '<a class="nav-link" href="' + this.gsx$update1.$t + '" target="_blank">Update 1</a>';
+          }
+          if (this.gsx$update2.$t !== "") {
+            source_details.innerHTML = '<a class="nav-link" href="' + this.gsx$update2.$t + '" target="_blank">Update 2</a>';
+          }
+          if (this.gsx$update3.$t !== "") {
+            source_details.innerHTML = '<a class="nav-link" href="' + this.gsx$update3.$t + '" target="_blank">Update 3</a>';
+          }
+          
+
+        });
+      });
+    </script>
   </body>
 </html>

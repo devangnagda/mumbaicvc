@@ -71,6 +71,7 @@ table.dataTable {
   border-left: 0.5px solid #006064;
   border-right: 0.5px solid #006064;
   border-top: none !important;
+  vertical-align: middle;
 }
 
 .custom-table :not(:last-child) > :last-child > * {
