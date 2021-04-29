@@ -33,7 +33,6 @@ table.dataTable {
 /* Table */
 .custom-table {
   font-weight: 600;
-  max-width: 85%;
   background-color: #fff;
   /*
    tbody .td-bg {
@@ -135,12 +134,6 @@ table.dataTable {
 }
 
 /* Search Input */
-.search-class {
-  padding-right: 0;
-  padding-left: 0;
-  max-width: 1301px;
-}
-
 .search-class .form-control {
   border: 0;
 }

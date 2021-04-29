@@ -13,6 +13,7 @@ $(document).ready(function () {
     fixedHeader: true, // Sticky Header
     ordering: true,
     info: false, // Remove info "Data Page 1 of 100"
+    autoWidth: false,
     columns: [
       {
         data: "gsx$srno.$t",
