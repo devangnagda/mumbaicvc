@@ -143,3 +143,46 @@ $(document).ready(function () {
   $("#data-table").dataTable();
   $("#data-table_filter input").removeClass("form-control-sm");
 });
+
+
+// Information Gathering from Google Sheet - Start
+
+// ID of the Google Spreadsheet
+var spreadsheetID = "1O3v5jAmt_8JUyyK2NT_h33bFraTcYPHjmtD5Lkuk6VE";
+
+// Make sure it is public or set to Anyone with link can view
+var surl =
+  "https://spreadsheets.google.com/feeds/list/" +
+  spreadsheetID +
+  "/2/public/values?alt=json";
+
+$.getJSON(surl, function (data) {
+  var sentry = data.feed.entry;
+
+  $(sentry).each(function () {
+    var todays_date = document.getElementById("todays-date");
+    todays_date.innerHTML = this.gsx$todaysdate.$t;
+
+    var last_updated_date = document.getElementById("last-updated-date");
+    last_updated_date.innerHTML =
+      "Last Updated: " + this.gsx$lastupdated.$t;
+
+    var source_details = document.getElementById("source-details");
+   
+    if (this.gsx$source.$t !== "") {
+      source_details.innerHTML = '<a class="nav-link" href="' + this.gsx$source.$t + '" target="_blank">Source</a>';
+    }
+    if (this.gsx$update1.$t !== "") {
+      source_details.innerHTML += '<a class="nav-link" href="' + this.gsx$update1.$t + '" target="_blank">Update 1</a>';
+    }
+    if (this.gsx$update2.$t !== "") {
+      source_details.innerHTML += '<a class="nav-link" href="' + this.gsx$update2.$t + '" target="_blank">Update 2</a>';
+    }
+    if (this.gsx$update3.$t !== "") {
+      source_details.innerHTML += '<a class="nav-link" href="' + this.gsx$update3.$t + '" target="_blank">Update 3</a>';
+    }
+
+  });
+});
+
+// Information Gathering from Google Sheet - End

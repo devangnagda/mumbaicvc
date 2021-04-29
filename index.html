@@ -122,33 +122,8 @@
               </td>
               <td colspan="4">
                 <nav class="nav nav-justified" id="source-details">
-                  <!-- <a
-                    class="nav-link"
-                    href="https://twitter.com/mybmc/status/1387483252072407044"
-                    >Source</a
-                  >
-                   <a
-                    class="nav-link"
-                    href="https://twitter.com/mybmc/status/1387267369467191296"
-                    >Update 1</a
-                  >
-                  <a
-                    class="nav-link"
-                    href="https://twitter.com/mybmc/status/1387286800637386754"
-                    >Update 2</a
-                  > -->
                 </nav>
-                <!-- <a
-                  class="source-link"
-                  target="_blank"
-                  href="https://twitter.com/mybmc/status/1386751788523556865"
-                >
-                  Source</a
-                >
-                -
-                <a class="source-link" target="_blank" href="">Update 1</a>
-                |
-                <a class="source-link" target="_blank" href="">Update 2</a> -->
+
               </td>
             </tr>
             <tr>
@@ -173,62 +148,5 @@
       </div>
     </div>
     <script type="text/javascript" src="main.js"></script>
-    <div class="results"></div>
-    <!-- <script>
-      const elFormattedDate = document.getElementById("formatted-date");
-
-      $.getJSON(
-        "https://spreadsheets.google.com/feeds/list/1O3v5jAmt_8JUyyK2NT_h33bFraTcYPHjmtD5Lkuk6VE/od6/public/values?alt=json",
-
-        function (data) {
-          var formattedDate = new Date(data.feed.updated.$t).toLocaleString(
-            "en-IN"
-          );
-          elFormattedDate.innerHTML = formattedDate;
-        }
-      );
-    </script> -->
-
-    <script>
-      // ID of the Google Spreadsheet
-      var spreadsheetID = "1O3v5jAmt_8JUyyK2NT_h33bFraTcYPHjmtD5Lkuk6VE";
-
-      // Make sure it is public or set to Anyone with link can view
-      var url =
-        "https://spreadsheets.google.com/feeds/list/" +
-        spreadsheetID +
-        "/2/public/values?alt=json";
-
-      $.getJSON(url, function (data) {
-        var entry = data.feed.entry;
-
-        $(entry).each(function () {
-          var todays_date = document.getElementById("todays-date");
-          todays_date.innerHTML = this.gsx$todaysdate.$t;
-
-          var last_updated_date = document.getElementById("last-updated-date");
-          last_updated_date.innerHTML =
-            "Last Updated: " + this.gsx$lastupdated.$t;
-
-          var source_details = document.getElementById("source-details");
-          
-          
-         
-          if (this.gsx$source.$t !== "") {
-            source_details.innerHTML = '<a class="nav-link" href="' + this.gsx$source.$t + '" target="_blank">Source</a>';
-          }
-          if (this.gsx$update1.$t !== "") {
-            source_details.innerHTML += '<a class="nav-link" href="' + this.gsx$update1.$t + '" target="_blank">Update 1</a>';
-          }
-          if (this.gsx$update2.$t !== "") {
-            source_details.innerHTML += '<a class="nav-link" href="' + this.gsx$update2.$t + '" target="_blank">Update 2</a>';
-          }
-          if (this.gsx$update3.$t !== "") {
-            source_details.innerHTML += '<a class="nav-link" href="' + this.gsx$update3.$t + '" target="_blank">Update 3</a>';
-          }
-
-        });
-      });
-    </script>
   </body>
 </html>
