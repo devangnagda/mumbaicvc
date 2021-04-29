@@ -212,20 +212,20 @@
 
           var source_details = document.getElementById("source-details");
           
-           
+          
+         
           if (this.gsx$source.$t !== "") {
             source_details.innerHTML = '<a class="nav-link" href="' + this.gsx$source.$t + '" target="_blank">Source</a>';
           }
           if (this.gsx$update1.$t !== "") {
-            source_details.innerHTML = '<a class="nav-link" href="' + this.gsx$update1.$t + '" target="_blank">Update 1</a>';
+            source_details.innerHTML += '<a class="nav-link" href="' + this.gsx$update1.$t + '" target="_blank">Update 1</a>';
           }
           if (this.gsx$update2.$t !== "") {
-            source_details.innerHTML = '<a class="nav-link" href="' + this.gsx$update2.$t + '" target="_blank">Update 2</a>';
+            source_details.innerHTML += '<a class="nav-link" href="' + this.gsx$update2.$t + '" target="_blank">Update 2</a>';
           }
           if (this.gsx$update3.$t !== "") {
-            source_details.innerHTML = '<a class="nav-link" href="' + this.gsx$update3.$t + '" target="_blank">Update 3</a>';
+            source_details.innerHTML += '<a class="nav-link" href="' + this.gsx$update3.$t + '" target="_blank">Update 3</a>';
           }
-          
 
         });
       });
