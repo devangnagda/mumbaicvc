@@ -1,4 +1,4 @@
-![Mumbai CVC Data](images/Mumbai-CVC.jpg)
+![Mumbai CVC Data](images/Mumbai-CVC.JPG)
 
 # mumbaicvc
 
