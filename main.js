@@ -1,5 +1,11 @@
 $(document).ready(function () {
-  var groupColumn = 1;
+  // Hide Search
+  $(document).on("preInit.dt", function (e, settings) {
+    $("#data-table_filter").hide();
+  });
+
+  var groupColumn = 1; // Grouping Ward
+
   var table = $("#data-table").DataTable({
     ajax: {
       url:
@@ -63,6 +69,8 @@ $(document).ready(function () {
         orderable: false,
       },
     ],
+
+    // Grouping Ward Starts //
     columnDefs: [
       {
         visible: false,
@@ -98,11 +106,14 @@ $(document).ready(function () {
           }
         });
     },
+    // Grouping Ward Ends //
 
     // Search Start //
 
     initComplete: function () {
       $("#data-table_filter").detach().appendTo("#search-area");
+
+      $("#data-table_filter").show();
     },
     language: {
       search: "",
@@ -111,7 +122,7 @@ $(document).ready(function () {
 
     // Search End //
 
-    // Not Available = Yes, No
+    // Not Available = Yes, No, EMPTY
     createdRow: function (row, data, dataIndex) {
       if (data.gsx$functionalondate.$t == "No") {
         $(row).addClass("text-muted status-no");
@@ -125,16 +136,6 @@ $(document).ready(function () {
       }
     },
   });
-
-  /*  Search Single Column
-      $("#mySearch").on("keyup click", function () {
-        table.column(2).search("^" + $(this).val() + "$", true);
-        if (table.page.info().recordsDisplay != 1) {
-          table.column(2).search("^" + $(this).val(), true);
-        }
-    
-        table.draw();
-      }); */
 });
 
 // Location change of Search input
@@ -144,13 +145,12 @@ $(document).ready(function () {
   $("#data-table_filter input").removeClass("form-control-sm");
 });
 
-
 // Information Gathering from Google Sheet - Start
 
 // ID of the Google Spreadsheet
 var spreadsheetID = "1O3v5jAmt_8JUyyK2NT_h33bFraTcYPHjmtD5Lkuk6VE";
 
-// Make sure it is public or set to Anyone with link can view
+// Google Sheets - URL
 var surl =
   "https://spreadsheets.google.com/feeds/list/" +
   spreadsheetID +
@@ -163,25 +163,40 @@ $.getJSON(surl, function (data) {
     var todays_date = document.getElementById("todays-date");
     todays_date.innerHTML = this.gsx$todaysdate.$t;
 
+    var centers_functional_status = document.getElementById(
+      "centers-functional-status"
+    );
+    centers_functional_status.innerHTML = this.gsx$centersfunctionalstatus.$t;
+
     var last_updated_date = document.getElementById("last-updated-date");
-    last_updated_date.innerHTML =
-      "Last Updated: " + this.gsx$lastupdated.$t;
+    last_updated_date.innerHTML = "Last Updated: " + this.gsx$lastupdated.$t;
 
     var source_details = document.getElementById("source-details");
-   
+
     if (this.gsx$source.$t !== "") {
-      source_details.innerHTML = '<a class="nav-link" href="' + this.gsx$source.$t + '" target="_blank">Source</a>';
+      source_details.innerHTML =
+        '<a class="nav-link" href="' +
+        this.gsx$source.$t +
+        '" target="_blank">Source</a>';
     }
     if (this.gsx$update1.$t !== "") {
-      source_details.innerHTML += '<a class="nav-link" href="' + this.gsx$update1.$t + '" target="_blank">Update 1</a>';
+      source_details.innerHTML +=
+        '<a class="nav-link" href="' +
+        this.gsx$update1.$t +
+        '" target="_blank">Update 1</a>';
     }
     if (this.gsx$update2.$t !== "") {
-      source_details.innerHTML += '<a class="nav-link" href="' + this.gsx$update2.$t + '" target="_blank">Update 2</a>';
+      source_details.innerHTML +=
+        '<a class="nav-link" href="' +
+        this.gsx$update2.$t +
+        '" target="_blank">Update 2</a>';
     }
     if (this.gsx$update3.$t !== "") {
-      source_details.innerHTML += '<a class="nav-link" href="' + this.gsx$update3.$t + '" target="_blank">Update 3</a>';
+      source_details.innerHTML +=
+        '<a class="nav-link" href="' +
+        this.gsx$update3.$t +
+        '" target="_blank">Update 3</a>';
     }
-
   });
 });
 
