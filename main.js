@@ -55,7 +55,6 @@ $(document).ready(function () {
         searchable: false,
         className: "col text-center td-bg",
         orderable: false,
-        visible: false,
       },
       {
         data: "gsx$covaxincovishield.$t",
@@ -123,21 +122,22 @@ $(document).ready(function () {
 
     // Search End //
 
-    /*
     // Not Available = Yes, No, EMPTY
     createdRow: function (row, data, dataIndex) {
       if (data.gsx$functionalondate.$t == "No") {
-        $(row).addClass("text-muted status-no");
+        $(row).addClass("text-muted status-no d-none");
       }
       if (data.gsx$functionalondate.$t == "Stock Exhausted") {
-        $(row).addClass("text-danger status-exhausted");
+        $(row).addClass("status-exhausted");
       }
 
       if (data.gsx$functionalondate.$t == "") {
         $(row).addClass("d-none");
       }
+      if (data.gsx$agegroup.$t == "18-44") {
+        $(row).addClass("age-group");
+      }
     },
-    */
   });
 });
 
