@@ -123,6 +123,7 @@ $(document).ready(function () {
 
     // Search End //
 
+    /* 
     // Not Available = Yes, No, EMPTY
     createdRow: function (row, data, dataIndex) {
       if (data.gsx$functionalondate.$t == "No") {
@@ -137,7 +138,7 @@ $(document).ready(function () {
       }
     },
   });
-});
+}); */
 
 // Location change of Search input
 
