@@ -49,6 +49,7 @@ $(document).ready(function () {
         searchable: false,
         className: "col text-center td-bg",
         orderable: false,
+        visible: false,
       },
       {
         data: "gsx$functionalondate.$t",
