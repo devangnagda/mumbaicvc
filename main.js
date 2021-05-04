@@ -77,34 +77,22 @@ $(document).ready(function () {
         targets: groupColumn,
       },
     ],
+
     order: [[groupColumn, "asc"]],
-    drawCallback: function (settings) {
-      var api = this.api();
-      var rows = api
-        .rows({
-          page: "current",
-        })
-        .nodes();
-      var last = null;
-
-      api
-        .column(groupColumn, {
-          page: "current",
-        })
-        .data()
-        .each(function (group, i) {
-          if (last !== group) {
-            $(rows)
-              .eq(i)
-              .before(
-                '<tr class="group text-center"><td colspan="6"> Ward <span class="badge bg-danger">' +
-                  group +
-                  "</span></td></tr>"
-              );
-
-            last = group;
-          }
-        });
+    rowGroup: {
+      dataSrc: "gsx$ward.$t",
+      className: "group text-center",
+      emptyDataGroup: null,
+      endRender: null,
+      startRender: function (rows, group) {
+        return rows.count() === 1
+          ? $("<tr hidden />")
+          : $("<tr/>").append(
+              '<td colspan="6">Ward <span class="badge bg-danger">' +
+                group +
+                "</span></td>"
+            );
+      },
     },
     // Grouping Ward Ends //
 

@@ -127,13 +127,7 @@ table.dataTable {
 }
 
 .status-exhausted {
-  background-color: #f8d7da;
-  color: #842029;
-}
-
-.age-group {
-  background-color: #fff3cd;
-  color: #664d03;
+  background-color: #fff5dd;
 }
 
 .custom-date {
