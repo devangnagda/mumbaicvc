@@ -17,64 +17,37 @@
     ></script>
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
     <!-- Data Tables -->
-    <script
-      type="text/javascript"
-      charset="utf8"
-      src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"
-    ></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
+
     <!-- Data Tables Fixed Header -->
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.datatables.net/fixedheader/3.1.8/css/fixedHeader.dataTables.min.css"
-    />
-    <script
-      type="text/javascript"
-      src="https://cdn.datatables.net/fixedheader/3.1.8/js/dataTables.fixedHeader.min.js"
-    ></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/fixedheader/3.1.8/css/fixedHeader.dataTables.min.css" />
+    <script type="text/javascript" src="https://cdn.datatables.net/fixedheader/3.1.8/js/dataTables.fixedHeader.min.js"></script>
+
     <!-- Bootstrap 5 Data Tables -->
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href=" https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap5.min.css"
-    />
-    <script
-      type="text/javascript"
-      charset="utf8"
-      src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap5.min.js"
-    ></script>
+    <link rel="stylesheet" type="text/css" href=" https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap5.min.css" />
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap5.min.js"></script>
 
     <!-- Bootstrap Row Group Data Tables -->
-    <script
-      type="text/javascript"
-      src="https://cdn.datatables.net/rowgroup/1.1.2/js/dataTables.rowGroup.min.js"
-    ></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/rowgroup/1.1.2/js/dataTables.rowGroup.min.js"></script>
+    <link href="https://cdn.datatables.net/rowgroup/1.1.2/css/rowGroup.bootstrap4.min.css" rel="stylesheet" />
 
-    <link
-      href="https://cdn.datatables.net/rowgroup/1.1.2/css/rowGroup.bootstrap4.min.css"
-      rel="stylesheet"
-    />
     <!-- Custom CSS -->
     <link href="./styles/stylesheet.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-JXEGX6C8LX"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
 
-      gtag("config", "G-JXEGX6C8LX");
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JXEGX6C8LX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
+
+      gtag('config', 'G-JXEGX6C8LX')
     </script>
   </head>
 
@@ -101,18 +74,13 @@
       <!-- <input type="text" id="searchInput" placeholder="Center Name Search..."/> -->
       <!-- Search -->
       <div class="container-fluid container-lg table-responsive">
-        <table
-          id="data-table"
-          class="table custom-table table-hover mx-auto w-100"
-        >
+        <table id="data-table" class="table custom-table table-hover mx-auto w-100">
           <thead class="table-header">
             <tr>
               <th>#</th>
               <th>Ward</th>
               <th class="align-middle text-center">Location</th>
-              <th class="align-middle text-center">
-                Name of Vaccination Centre
-              </th>
+              <th class="align-middle text-center">Name of Vaccination Centre</th>
               <th class="align-middle">Facility Category</th>
               <th class="align-middle">Functional Today ?</th>
               <th class="align-middle text-center">Covaxin / Covishield</th>
@@ -131,19 +99,9 @@
             </tr>
             <tr>
               <td colspan="8" class="text-center py-3">
-                <a
-                  class="source-link"
-                  target="_blank"
-                  href="https://github.com/devangnagda"
-                  >Created by Devang Nagda</a
-                >
+                <a class="source-link" target="_blank" href="https://github.com/devangnagda">Created by Devang Nagda</a>
                 |
-                <a
-                  class="source-link"
-                  target="_blank"
-                  href="https://twitter.com/devang_nagda"
-                  >Contact Me</a
-                >
+                <a class="source-link" target="_blank" href="https://twitter.com/devang_nagda">Contact Me</a>
               </td>
             </tr>
           </tfoot>
