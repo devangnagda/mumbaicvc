@@ -1,6 +1,4 @@
-# mumbaicvc
-
-Mumbai Coronavirus Vaccination Centers Data
+# Mumbai Coronavirus Vaccination Centers Data
 
 ## Features
 
@@ -8,6 +6,6 @@ Mumbai Coronavirus Vaccination Centers Data
 - Segregated according to Mumbai Wards
 - Implemented using the Datatables and Google Sheets
 
-# Screenshot
+## Screenshot
 
 ![Mumbai CVC Data](images/Mumbai-CVC.JPG)
