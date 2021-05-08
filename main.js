@@ -142,13 +142,27 @@ $.getJSON(surl, function (data) {
 
   $(sentry).each(function () {
     var todays_date = document.getElementById('todays-date');
+    if (this.gsx$todaysdate.$t !== '') {
+      todays_date.innerHTML = this.gsx$todaysdate.$t;
+    }
+
+    var last_updated_date = document.getElementById('last-updated-date');
+    if (this.gsx$lastupdated.$t !== '') {
+      last_updated_date.innerHTML = 'Last Updated: ' + this.gsx$lastupdated.$t;
+    }
+
+    var centers_functional_status = document.getElementById('centers-functional-status');
+
+    centers_functional_status.innerHTML += '<ul class="centers-details"><li class="centers-details-item">' + this.gsx$centersfunctionalstatus.$t + '</li></ul>';
+
+    /* var todays_date = document.getElementById('todays-date');
     todays_date.innerHTML = this.gsx$todaysdate.$t;
 
     var centers_functional_status = document.getElementById('centers-functional-status');
     centers_functional_status.innerHTML = this.gsx$centersfunctionalstatus.$t;
 
     var last_updated_date = document.getElementById('last-updated-date');
-    last_updated_date.innerHTML = 'Last Updated: ' + this.gsx$lastupdated.$t;
+    last_updated_date.innerHTML = 'Last Updated: ' + this.gsx$lastupdated.$t; */
 
     var source_details = document.getElementById('source-details');
 
