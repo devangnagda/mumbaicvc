@@ -12,6 +12,7 @@ $black: #000;
 
 $bdg-yellow: #fcc100;
 $bdg-blue: #0d6efd;
+$bdg-green: #006064;
 
 body {
   font-family: Montserrat, sans-serif;
@@ -184,6 +185,10 @@ table.dataTable {
       }
       .bdg-gray {
         background-color: $gray-600;
+        color: white;
+      }
+      .bdg-green {
+        background-color: $bdg-green;
         color: white;
       }
 

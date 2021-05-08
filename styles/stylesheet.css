@@ -181,6 +181,11 @@ table.dataTable {
   color: white;
 }
 
+.centers-functional-status .centers-details .centers-details-item .bdg-green {
+  background-color: #006064;
+  color: white;
+}
+
 .centers-functional-status .centers-details .centers-details-item a {
   text-decoration: none;
   color: #006064;

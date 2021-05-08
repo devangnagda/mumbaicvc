@@ -30,6 +30,7 @@ $(document).ready(function () {
       {
         data: 'gsx$ward.$t',
         searchable: false,
+        visible: false,
       },
       {
         data: 'gsx$location.$t',
