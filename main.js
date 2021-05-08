@@ -115,7 +115,7 @@ $(document).ready(function () {
       if (data.gsx$functionalondate.$t === '') {
         $(row).addClass('d-none');
       }
-      if (data.gsx$agegroup.$t === '18-44') {
+      if (data.gsx$agegroup.$t === '18+') {
         $(row).addClass('age-group');
       }
     },
