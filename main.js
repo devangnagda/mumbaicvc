@@ -84,8 +84,14 @@ $(document).ready(function () {
       className: 'group text-center',
       emptyDataGroup: null,
       endRender: null,
-      startRender: function (rows, group, level) {
-        return rows.count() === 1 ? $('<tr hidden />') : $('<tr/>').append('<td colspan="6">Ward <span class="badge bg-danger">' + group + '</span></td>');
+     startRender: function (rows, group) {
+        var count = 0;
+        rows.every(function () {
+          if (!$(this.node()).hasClass('d-none')) {
+            count++;
+          }
+        });
+        return count === 0 ? $('<tr hidden />') : $('<tr/>').append('<td colspan="6">Ward <span class="badge bg-danger">' + group + '</span></td>');
       },
     },
     // Grouping Ward Ends //
