@@ -194,9 +194,9 @@ table.fixedHeader-floating {
   }
 
   thead {
-    box-shadow: 0 0.3125rem 0.625rem /* 5px 10px */ $clr-gray300;
+    box-shadow: 0 0.3125rem 0.625rem /* 5px 10px */ $clr-gray500;
     position: relative;
-    z-index: 0;
+    z-index: 1;
   }
 
   th {

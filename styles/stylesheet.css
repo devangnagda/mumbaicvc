@@ -194,10 +194,10 @@ table.fixedHeader-floating {
 }
 
 .custom-table thead {
-  -webkit-box-shadow: 0 0.3125rem 0.625rem #e1e5ee;
-          box-shadow: 0 0.3125rem 0.625rem #e1e5ee;
+  -webkit-box-shadow: 0 0.3125rem 0.625rem #4f546c;
+          box-shadow: 0 0.3125rem 0.625rem #4f546c;
   position: relative;
-  z-index: 0;
+  z-index: 1;
 }
 
 .custom-table th {
