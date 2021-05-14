@@ -166,6 +166,10 @@ table.dataTable {
   text-decoration: none;
 }
 
+.centers-functional-status .centers-details .centers-details-item .badge {
+  line-height: 1.25;
+}
+
 .centers-functional-status .centers-details .centers-details-item .bdg-yellow {
   background-color: #fcc100;
   color: #664d03;

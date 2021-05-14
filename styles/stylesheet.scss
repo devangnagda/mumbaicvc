@@ -123,6 +123,25 @@ table.dataTable {
     font-size: 1.75rem;
     background-color: #fff;
   }
+
+  .vaccine {
+    &-covishield {
+      .vaccine-text {
+        // color: #388e3c;
+      }
+    }
+
+    &-covaxin {
+      .vaccine-text {
+        // color: #0d47a1;
+      }
+    }
+    &-both {
+      .vaccine-text {
+        // color: #bf360c;
+      }
+    }
+  }
 }
 
 .source-link {
@@ -167,7 +186,6 @@ table.dataTable {
     flex-direction: column;
     padding-left: 0;
     margin-bottom: 0;
-
     list-style: none;
     .centers-details-item {
       position: relative;
@@ -175,6 +193,9 @@ table.dataTable {
       padding: 0.5rem 1rem;
       text-decoration: none;
 
+      .badge {
+        line-height: 1.25;
+      }
       .bdg-yellow {
         background-color: $bdg-yellow;
         color: #664d03;
