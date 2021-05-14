@@ -58,9 +58,6 @@ body a:hover {
   padding: 0.5rem 1rem;
   color: #4f546c;
   text-decoration: none;
-  border: 0.0625rem solid #e1e5ee;
-  border-radius: 0.625rem;
-  /* 10px */
   margin-bottom: 0.5rem;
 }
 
@@ -168,9 +165,12 @@ table.dataTable .dataTables_empty:hover {
 
 table.fixedHeader-floating {
   position: fixed !important;
-  background-color: white;
   border-radius: 0.625rem 0.625rem 0 0;
   /* 10px 10px */
+}
+
+table.fixedHeader-floating > :not(:last-child) > :last-child > * {
+  border-bottom: none;
 }
 
 .custom-table {
@@ -194,8 +194,8 @@ table.fixedHeader-floating {
 }
 
 .custom-table thead {
-  -webkit-box-shadow: 0 0.3125rem 0.625rem #4f546c;
-          box-shadow: 0 0.3125rem 0.625rem #4f546c;
+  -webkit-box-shadow: 0 0.125rem 0.625rem #bec1ca;
+          box-shadow: 0 0.125rem 0.625rem #bec1ca;
   position: relative;
   z-index: 1;
 }
@@ -241,6 +241,7 @@ table.fixedHeader-floating {
 .custom-table tbody .group .ward-name {
   display: inline;
   padding: 0.35em 1em;
+  margin-left: 0.35em;
   font-size: 1em;
   font-weight: 700;
   line-height: 1;
