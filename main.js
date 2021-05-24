@@ -30,36 +30,35 @@ $(document).ready(function () {
       {
         data: 'gsx$ward.$t',
         searchable: false,
-        visible: false,
       },
       {
         data: 'gsx$location.$t',
         searchable: true,
-        className: 'col td-bg',
+        className: 'col',
         orderable: false,
       },
       {
         data: 'gsx$nameofactivevaccinationcentre.$t',
         searchable: true,
-        className: 'col td-bg',
+        className: 'col',
         orderable: false,
       },
       {
         data: 'gsx$facilitycategory.$t',
         searchable: false,
-        className: 'col text-center td-bg',
+        className: 'col-lg-1 text-center',
         orderable: false,
       },
       {
         data: 'gsx$functionalondate.$t',
         searchable: false,
-        className: 'col text-center td-bg',
+        className: 'col-lg-1 text-center status',
         orderable: false,
       },
       {
         data: 'gsx$covaxincovishield.$t',
         searchable: false,
-        className: 'col td-bg',
+        className: 'col-lg-1',
         orderable: false,
         render: function (data, type, row) {
           return '<span class="vaccine-text">' + data + '</span>';
@@ -68,7 +67,7 @@ $(document).ready(function () {
       {
         data: 'gsx$remarks.$t',
         searchable: false,
-        className: 'col td-bg',
+        className: 'col',
         orderable: false,
       },
     ],
@@ -80,6 +79,7 @@ $(document).ready(function () {
         targets: groupColumn,
       },
     ],
+    // order: [[groupColumn, 'asc']],
 
     rowGroup: {
       dataSrc: 'gsx$ward.$t',
@@ -93,7 +93,7 @@ $(document).ready(function () {
             count++;
           }
         });
-        return count === 0 ? $('<tr hidden />') : $('<tr/>').append('<td colspan="6">Ward <span class="badge bg-danger">' + group + '</span></td>');
+        return count === 0 ? $('<tr hidden />') : $('<tr/>').append('<td colspan="6">Ward <span class="ward-name">' + group + '</span></td>');
       },
     },
     // Grouping Ward Ends //
@@ -127,7 +127,7 @@ $(document).ready(function () {
         $(row).addClass('d-none');
       }
       if (data.gsx$agegroup.$t === '18+') {
-        $(row).addClass('age-group');
+        $(row).addClass('status-age18');
       }
 
       // Covishield, Covaxin and Both
@@ -175,16 +175,9 @@ $.getJSON(surl, function (data) {
 
     var centers_functional_status = document.getElementById('centers-functional-status');
 
+    //centers_functional_status.innerHTML = this.gsx$centersfunctionalstatus.$t;
+
     centers_functional_status.innerHTML += '<ul class="centers-details"><li class="centers-details-item">' + this.gsx$centersfunctionalstatus.$t + '</li></ul>';
-
-    /* var todays_date = document.getElementById('todays-date');
-    todays_date.innerHTML = this.gsx$todaysdate.$t;
-
-    var centers_functional_status = document.getElementById('centers-functional-status');
-    centers_functional_status.innerHTML = this.gsx$centersfunctionalstatus.$t;
-
-    var last_updated_date = document.getElementById('last-updated-date');
-    last_updated_date.innerHTML = 'Last Updated: ' + this.gsx$lastupdated.$t; */
 
     var source_details = document.getElementById('source-details');
 
