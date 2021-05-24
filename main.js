@@ -60,6 +60,9 @@ $(document).ready(function () {
         searchable: false,
         className: 'col-lg-1',
         orderable: false,
+        render: function (data, type, row) {
+          return '<span class="vaccine-text">' + data + '</span>';
+        },
       },
       {
         data: 'gsx$remarks.$t',
@@ -76,8 +79,8 @@ $(document).ready(function () {
         targets: groupColumn,
       },
     ],
-
     // order: [[groupColumn, 'asc']],
+
     rowGroup: {
       dataSrc: 'gsx$ward.$t',
       className: 'group text-center',
@@ -125,6 +128,17 @@ $(document).ready(function () {
       }
       if (data.gsx$agegroup.$t === '18+') {
         $(row).addClass('status-age18');
+      }
+
+      // Covishield, Covaxin and Both
+      if (data.gsx$covaxincovishield.$t === 'Covishield') {
+        $('td', row).eq(4).addClass('vaccine-covishield');
+      }
+      if (data.gsx$covaxincovishield.$t === 'Covaxin') {
+        $('td', row).eq(4).addClass('vaccine-covaxin');
+      }
+      if (data.gsx$covaxincovishield.$t === 'Both') {
+        $('td', row).eq(4).addClass('vaccine-both');
       }
     },
   });
@@ -183,3 +197,5 @@ $.getJSON(surl, function (data) {
 });
 
 // Information Gathering from Google Sheet - End
+
+//check
