@@ -1,15 +1,31 @@
+var api_key = "AIzaSyBX9nWaFWJ86YDMgm4gCGtsyoC4joY17mg";
+var spreadsheet_id = "1O3v5jAmt_8JUyyK2NT_h33bFraTcYPHjmtD5Lkuk6VE";
+var sheet1_name = "mumbaivaccinationcenters";
+var sheet1_range = "A2:Y932";
+var sheet2_name = "infoo";
+var sheet2_range = "A1:D7";
+
 $(document).ready(function () {
   // Hide Search
-  $(document).on('preInit.dt', function (e, settings) {
-    $('#data-table_filter').hide();
+  $(document).on("preInit.dt", function (e, settings) {
+    $("#data-table_filter").hide();
   });
 
   var groupColumn = 1; // Grouping Ward
 
-  var table = $('#data-table').DataTable({
+  var table = $("#data-table").DataTable({
     ajax: {
-      url: 'https://spreadsheets.google.com/feeds/list/1O3v5jAmt_8JUyyK2NT_h33bFraTcYPHjmtD5Lkuk6VE/od6/public/values?alt=json',
-      dataSrc: 'feed.entry',
+      url:
+        "https://sheets.googleapis.com/v4/spreadsheets/" +
+        spreadsheet_id +
+        "/values/" +
+        sheet1_name +
+        "!" +
+        sheet1_range +
+        "?alt=json&key=" +
+        api_key,
+
+      dataSrc: "values",
     },
     searching: true, // Enable Search
     // scrollY: '70vh', // Scrollable table fixed top - display vertical height
@@ -21,57 +37,56 @@ $(document).ready(function () {
     autoWidth: false,
     columns: [
       {
-        data: 'gsx$srno.$t',
+        data: 0, // Sr No
         searchable: false,
         // className: "text-center col-1",
         orderable: false,
         visible: false,
       },
       {
-        data: 'gsx$ward.$t',
+        data: 1, // Ward
         searchable: false,
       },
       {
-        data: 'gsx$location.$t',
+        data: 2, // Location
         searchable: true,
-        className: 'col',
+        className: "col",
         orderable: false,
       },
       {
-        data: 'gsx$nameofactivevaccinationcentre.$t',
+        data: 3, // Name of active vaccination centre
         searchable: true,
-        className: 'col',
+        className: "col",
         orderable: false,
       },
       {
-        data: 'gsx$facilitycategory.$t',
+        data: 4, // Facility Category
         searchable: false,
-        className: 'col-lg-1 text-center',
+        className: "col-lg-1 text-center",
         orderable: false,
       },
       {
-        data: 'gsx$functionalondate.$t',
+        data: 5, // Functional on (Date)?
         searchable: false,
-        className: 'col-lg-1 text-center status',
+        className: "col-lg-1 text-center status",
         orderable: false,
       },
       {
-        data: 'gsx$covaxincovishield.$t',
+        data: 7, // Vaccine
         searchable: false,
-        className: 'col-lg-1',
+        className: "col-lg-1",
         orderable: false,
         render: function (data, type, row) {
-          return '<span class="vaccine-text">' + data + '</span>';
+          return '<span class="vaccine-text">' + data + "</span>";
         },
       },
       {
-        data: 'gsx$remarks.$t',
+        data: 8, // Remarks
         searchable: false,
-        className: 'col',
+        className: "col",
         orderable: false,
       },
     ],
-
     // Grouping Ward Starts //
     columnDefs: [
       {
@@ -82,18 +97,20 @@ $(document).ready(function () {
     // order: [[groupColumn, 'asc']],
 
     rowGroup: {
-      dataSrc: 'gsx$ward.$t',
-      className: 'group text-center',
+      dataSrc: 1,
+      className: "group text-center",
       emptyDataGroup: null,
       endRender: null,
       startRender: function (rows, group) {
         var count = 0;
         rows.every(function () {
-          if (!$(this.node()).hasClass('d-none')) {
+          if (!$(this.node()).hasClass("d-none")) {
             count++;
           }
         });
-        return count === 0 ? $('<tr hidden />') : $('<tr/>').append('<td colspan="6">Ward <span class="ward-name">' + group + '</span></td>');
+        return count === 0
+          ? $("<tr hidden />")
+          : $("<tr/>").append('<td colspan="6">Ward <span class="ward-name">' + group + "</span></td>");
       },
     },
     // Grouping Ward Ends //
@@ -101,44 +118,45 @@ $(document).ready(function () {
     // Search Start //
 
     initComplete: function () {
-      $('#data-table_filter').detach().appendTo('#search-area');
+      $("#data-table_filter").detach().appendTo("#search-area");
 
-      $('#data-table_filter').show();
+      $("#data-table_filter").show();
     },
     language: {
-      search: '',
-      searchPlaceholder: 'Search Location or Center Name...',
-      emptyTable: 'No Data Available',
-      zeroRecords: 'No Data Available.',
+      search: "",
+      searchPlaceholder: "Search Location or Center Name...",
+      processing: true,
+      emptyTable: "No Data Available",
+      // zeroRecords: "No Data Available",
     },
 
     // Search End //
 
     // Not Available = Yes, No, EMPTY, 18-44
     createdRow: function (row, data, dataIndex) {
-      if (data.gsx$functionalondate.$t === 'No') {
-        $(row).addClass('text-muted status-no d-none');
+      if (data[6] === "No") {
+        $(row).addClass("text-muted status-no d-none");
       }
-      if (data.gsx$functionalondate.$t === 'Stock Exhausted') {
-        $(row).addClass('status-exhausted');
+      if (data[6] === "Stock Exhausted") {
+        $(row).addClass("status-exhausted");
       }
 
-      if (data.gsx$functionalondate.$t === '') {
-        $(row).addClass('d-none');
+      if (data[6] === "") {
+        $(row).addClass("d-none");
       }
-      if (data.gsx$agegroup.$t === '18+') {
-        $(row).addClass('status-age18');
+      if (data[6] === "18+") {
+        $(row).addClass("status-age18");
       }
 
       // Covishield, Covaxin and Both
-      if (data.gsx$covaxincovishield.$t === 'Covishield') {
-        $('td', row).eq(4).addClass('vaccine-covishield');
+      if (data[7] === "Covishield") {
+        $("td", row).eq(4).addClass("vaccine-covishield");
       }
-      if (data.gsx$covaxincovishield.$t === 'Covaxin') {
-        $('td', row).eq(4).addClass('vaccine-covaxin');
+      if (data[7] === "Covaxin") {
+        $("td", row).eq(4).addClass("vaccine-covaxin");
       }
-      if (data.gsx$covaxincovishield.$t === 'Both') {
-        $('td', row).eq(4).addClass('vaccine-both');
+      if (data[7] === "Both") {
+        $("td", row).eq(4).addClass("vaccine-both");
       }
     },
   });
@@ -147,51 +165,57 @@ $(document).ready(function () {
 // Location change of Search input
 
 $(document).ready(function () {
-  $('#data-table').dataTable();
-  $('#data-table_filter input').removeClass('form-control-sm');
+  $("#data-table").dataTable();
+  $("#data-table_filter input").removeClass("form-control-sm");
 });
 
 // Information Gathering from Google Sheet - Start
 
 // ID of the Google Spreadsheet
-var spreadsheetID = '1O3v5jAmt_8JUyyK2NT_h33bFraTcYPHjmtD5Lkuk6VE';
 
 // Google Sheets - URL
-var surl = 'https://spreadsheets.google.com/feeds/list/' + spreadsheetID + '/2/public/values?alt=json';
+var url2 =
+  "https://sheets.googleapis.com/v4/spreadsheets/" +
+  spreadsheet_id +
+  "/values/" +
+  sheet2_name +
+  "!" +
+  sheet2_range +
+  "?alt=json&key=" +
+  api_key;
 
-$.getJSON(surl, function (data) {
-  var sentry = data.feed.entry;
-
+$.getJSON(url2, function (data) {
+  var sentry = data.values;
+  var centers_functional_status = document.getElementById("centers-functional-status");
+  for (var i = 1; i < 4; i++) {
+    if (data.values[1][i] !== "") {
+      centers_functional_status.innerHTML +=
+        '<ul class="centers-details"><li class="centers-details-item">' + data.values[1][i] + "</li></ul>";
+    }
+  }
   $(sentry).each(function () {
-    var todays_date = document.getElementById('todays-date');
-    if (this.gsx$todaysdate.$t !== '') {
-      todays_date.innerHTML = this.gsx$todaysdate.$t;
+    var todays_date = document.getElementById("todays-date");
+    if (data.values[0][1] !== "") {
+      todays_date.innerHTML = data.values[0][1]; //Today's Date
+    }
+    var last_updated_date = document.getElementById("last-updated-date");
+    if (data.values[2][1] !== "") {
+      last_updated_date.innerHTML = "Last Updated: " + data.values[2][1]; // Last Updated
     }
 
-    var last_updated_date = document.getElementById('last-updated-date');
-    if (this.gsx$lastupdated.$t !== '') {
-      last_updated_date.innerHTML = 'Last Updated: ' + this.gsx$lastupdated.$t;
+    var source_details = document.getElementById("source-details");
+
+    if (data.values[3][1] !== "") {
+      source_details.innerHTML = '<a class="nav-link" href="' + data.values[3][1] + '" target="_blank">Source</a>';
     }
-
-    var centers_functional_status = document.getElementById('centers-functional-status');
-
-    //centers_functional_status.innerHTML = this.gsx$centersfunctionalstatus.$t;
-
-    centers_functional_status.innerHTML += '<ul class="centers-details"><li class="centers-details-item">' + this.gsx$centersfunctionalstatus.$t + '</li></ul>';
-
-    var source_details = document.getElementById('source-details');
-
-    if (this.gsx$source.$t !== '') {
-      source_details.innerHTML = '<a class="nav-link" href="' + this.gsx$source.$t + '" target="_blank">Source</a>';
+    if (data.values[4][1] !== "") {
+      source_details.innerHTML += '<a class="nav-link" href="' + data.values[4][1] + '" target="_blank">Update 1</a>';
     }
-    if (this.gsx$update1.$t !== '') {
-      source_details.innerHTML += '<a class="nav-link" href="' + this.gsx$update1.$t + '" target="_blank">Update 1</a>';
+    if (data.values[5][1] !== "") {
+      source_details.innerHTML += '<a class="nav-link" href="' + data.values[5][1] + '" target="_blank">Update 2</a>';
     }
-    if (this.gsx$update2.$t !== '') {
-      source_details.innerHTML += '<a class="nav-link" href="' + this.gsx$update2.$t + '" target="_blank">Update 2</a>';
-    }
-    if (this.gsx$update3.$t !== '') {
-      source_details.innerHTML += '<a class="nav-link" href="' + this.gsx$update3.$t + '" target="_blank">Update 3</a>';
+    if (data.values[6][1] !== "") {
+      source_details.innerHTML += '<a class="nav-link" href="' + data.values[6][1] + '" target="_blank">Update 3</a>';
     }
   });
 });
